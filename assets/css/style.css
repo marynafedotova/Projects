@@ -10,7 +10,7 @@ body{
 main.wrapper {
   display: flex;
   flex-direction: column; /* Встановлюємо напрямок колонок */
-  height: 100vh; /* Встановлюємо висоту контейнера на всю висоту видимого вікна */
+  height: 100%; /* Встановлюємо висоту контейнера на всю висоту видимого вікна */
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -25,6 +25,7 @@ h1{
 }
 ul{
   list-style: none;
+  margin-bottom: 50px;
 }
 ul li{
   padding-top: 20px;

@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #e5e5e5;
+  padding: 54px 40px 24px 40px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+main.wrapper {
+  display: flex;
+  flex-direction: column; /* Встановлюємо напрямок колонок */
+  height: 100vh; /* Встановлюємо висоту контейнера на всю висоту видимого вікна */
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+}
+
+h1{
+  text-align: center;
+  color:cornflowerblue;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+ul{
+  list-style: none;
+}
+ul li{
+  padding-top: 20px;
+}
+.list-lessons{
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 60px;
+}
+a:hover{
+  text-decoration:underline;
+  color: blue;
+}

@@ -1,0 +1,268 @@
+
+$primary-color: #3C3C3C;
+$secondary-color:#646464;
+$hover-color: #18B5DC;
+
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #f6f6f6;
+  color: $primary-color;
+
+}
+.wrapper{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 100vh;
+
+}
+ul{
+  list-style: none;
+}
+a, button{
+  text-decoration: none;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+img{
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container {
+  width: min(90%, 1170px);
+  margin: 0 auto;
+}
+header{
+  padding: 10px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #bdbdbd;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo, .header-box{
+    width: 200px;
+  }
+  .header-box{
+    text-align: right;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 0 30px;
+  a{
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $primary-color;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+.btn {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid $primary-color;
+  background-color: transparent;
+  svg{
+    display: none;
+  }
+  &:hover{
+    color: #fff;
+    border-color: $hover-color;
+    background-color: #18B5DC;
+}
+}
+.hamburger{
+  display: none;
+}
+.biography-section{
+  padding: 150px 0;
+}
+.main-title{
+text-align: center;
+font-size: 2.125rem;
+font-weight: 700;
+letter-spacing: 0.27625rem;
+text-transform: uppercase;
+position: relative;
+padding-bottom: 16px;
+margin-bottom: 40px;
+&::after{
+  display: inline-block;
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background-color: #dbdbdb;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+}
+main{
+  flex-grow: 1;
+}
+.sub-title{
+font-size: 1rem;
+font-weight: 300;
+max-width: 570px;
+margin: 0 auto 54px;
+text-align: center;
+line-height: 1.5rem; 
+}
+.team{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.item-top:hover .item-soc{
+  opacity: 1;
+}
+.item-top{
+  position: relative;
+  margin-bottom: 20px;
+  .item-soc{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $hover-color;
+    transition: all .2s ease;
+    opacity: 0;
+  }
+}
+.item-bottom{
+  padding-left: 1px;
+  font-size: 1.125rem;
+  .bio-title{
+    color: $secondary-color;
+    font-weight: 700;
+  }
+  .position{
+    color: #646464;
+    font-weight: 300;
+  }
+}
+.footer{
+  padding: 40px 0;
+  background-color: #fff;
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+  .menu a{
+    font-size: 1.125rem;
+  }
+}
+.soc-list{
+  display: flex;
+  gap: 4px;
+  a {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    background-color: #5dcbe6;
+    justify-content: center;
+    align-items: center;
+    svg {
+      fill: #fff;
+      transition: all .2s ease;
+    }
+    &:hover {
+      background-color: #fff;
+      svg{
+        fill: $hover-color;
+      }
+    }
+  }
+}
+
+.footer-social {
+  @extend .soc-list;
+  gap: 10px;
+  a {
+    border: 1px solid $hover-color;
+    background-color: #fff;
+    path{
+      fill: $hover-color;
+    }
+    &:hover{
+      background-color: $hover-color;
+      path{
+        fill: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:980px){
+  .header nav{
+    display: none;
+  }.hamburger{
+    display: block;
+  }
+}
+
+@media screen and (max-width:800px){
+  li .team-item{
+    width: calc(50% -15px);
+
+  }
+  .team-item{
+    width: 50%;
+    flex-wrap: wrap;
+  }
+  .biography-section{
+    padding: 50px 0;
+  }
+}
+@media screen and (max-width:500px){
+  .btn {
+    span{
+      display: none;
+      svg{
+        display: none;
+      path{
+        fill: $primary-color;
+      }
+  }
+  &:hover svg path{
+    color: #fff;
+  }
+}
+}
+}
+
+@media screen and (max-width:420px){
+  .team-item{
+    width: 100%;
+  }
+  .footer .menu{
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20vw;
+  }
+
+}

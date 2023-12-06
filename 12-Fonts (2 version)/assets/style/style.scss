@@ -1,0 +1,277 @@
+@import 'template';
+@import '_fonts';
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'PT Sans Regular';
+  background-image: url(../img/bg-picture.png);
+  background-position: top 150px right 0px;
+  background-repeat: no-repeat;
+
+  // font-size: 1.75rem;
+  // font-weight: 400;
+  // line-height: 3rem;
+  
+}
+// header
+header{
+  background-color: #fff;
+  // background-color: rgba(#f5f1f1, .5);
+  
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 104px;
+  padding-top: 12px;
+  align-items: center;
+  
+  .header-container{
+    display: flex;
+    vertical-align: middle;
+  }
+}
+.container-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  // backdrop-filter: blur(2px);
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  position: relative;
+}
+.content-main{
+  margin-top: 174px;
+  display: grid;
+  grid-template-columns: 372px 1fr;
+  gap: 40px;
+}
+.sidebar{
+  position: sticky;
+  top: 80px;
+  height: 100vh;
+}
+.sidebar a {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 70px;
+  font-family: 'Francois One';
+font-size: 2.25rem;
+font-weight: 400;
+line-height: 3rem; 
+letter-spacing: 0.09rem;
+text-transform: uppercase;
+
+}
+.title-nav{
+  padding-bottom: 8px;
+  border-bottom: 1px solid #BDBDBD;
+  margin-bottom: 83px;
+  margin-left: 3px;
+  margin-top: -12px;
+}
+a:hover{
+  color: #C0c0c0;
+  transition: all .2s ease;
+}
+
+.eng-title {
+  font-family: 'Tourney SemiBold';
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  letter-spacing: 0.0825rem;
+  margin-top: 2px;
+}
+.sub-title{
+  font-family: 'Farro';
+  font-size: 1.4rem;
+font-weight: 300;
+letter-spacing: 0.02rem;
+vertical-align: super;
+}
+.title-header {
+  font-family: 'Staatliches';
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0.04125rem;
+  text-transform: uppercase;
+
+}
+header .first{
+  padding-left: 50px;
+  padding-right: 10px;
+}
+header .second{
+  padding-right: 11px;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+// main
+main{
+  z-index: -10;
+}
+.pt-sans{
+font-size: 1.75rem;
+font-weight: 400;
+line-height: 3rem;
+}
+.text-container{
+  margin-left: -4px;
+  width: 100%;
+
+}
+.text-container .text .underline{
+  text-decoration: underline;
+}
+.sans-italic{
+font-family: 'PT Sans Italic';
+font-size: 1.75rem;
+font-style: italic;
+font-weight: 400;
+line-height: 3rem;
+}
+// bold
+.sans-bold{
+  font-family: 'PT Sans Bold';
+font-size: 1.75rem;
+font-weight: 700;
+line-height: 3rem;
+padding-right: 5px;
+}
+.pl{
+  margin-left: -5px;
+}
+
+.text-bg{
+  background-color: #C0c0c0;
+}
+#introduction, #corecomponents, #reactfundamentals, #handlingtext {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 39px;
+}
+// 
+// .text-container p .pb{
+  // padding-bottom: 20px;
+// }
+
+ul {
+  margin-top: 24px;
+}
+li {
+  padding-bottom: 30px;
+}
+.pad {
+  margin-bottom: 33px;
+}
+.mtop{
+  margin-top: 8px;
+  margin-bottom: 10px;
+  .sans-bold{
+    margin-right: 5px;
+  }
+}
+.text-container span, .pt-sans {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: 'Francois One';
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 3rem; 
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+.text-container {
+  padding-bottom: 70px;
+  width: 100%;
+
+}
+
+#introduction .title,
+#introduction .sub-title {
+  display: inline-block; 
+  padding-right: 10px;
+}
+#corecomponents .title,
+#corecomponents .sub-title{
+  display: inline-block;
+padding-right: 10px;
+}
+
+#reactfundamentals .title,
+#reactfundamentals .sub-title{
+  display: inline-block;
+  padding-right: 10px;
+}
+
+#handlingtext .title,
+#handlingtext .sub-title{
+  display: inline-block;
+  padding-right: 10px;
+}
+#handlingtext{
+  margin-top: -45px;
+}
+
+.last {
+  margin-bottom: 90px;
+}
+.container #introduction::before{
+content: '';
+width: 100px;
+height: 8px;
+background-color: #000;
+position: absolute;
+left: 409px;
+top: -24px;
+margin-bottom: 10px;
+}
+#corecomponents, #reactfundamentals{
+  margin-top: -17px;
+}
+
+#corecomponents::before{
+content: '';
+width: 100px;
+height: 8px;
+background-color: #000;
+position: absolute;
+left: 409px;
+top: 355px;
+}
+
+
+#reactfundamentals::before{
+  content: '';
+width: 100px;
+height: 8px;
+background-color: #000;
+position: absolute;
+left: 409px;
+top: 875px;
+margin-bottom: 10px;
+}
+
+
+#handlingtext::before{
+  content: '';
+width: 100px;
+height: 8px;
+background-color: #000;
+position: absolute;
+left: 409px;
+top: 2450px;
+margin-bottom: 10px;
+}

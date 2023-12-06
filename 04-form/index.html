@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <h1>Форма реєстрації</h1>
+  <form action="#" target="_blank" method="post" enctype="multipart/form-data" id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+
+    <fieldset>
+      <legend>Особисті дані</legend>
+
+      <div class="form-row">
+        <label for="full_name">Повне ім’я:</label>
+        <input type="text" placeholder="Введіть ваше ім'я"id="full_name" name="full_name"required>
+      </div>
+
+      <div class="form-row">
+        <label for="avatar">Аватар:</label>
+        <input type="file" id="avatar" name="avatar" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email"placeholder="Введіть ваш email" id="email" name="email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="password">Пароль:</label>
+        <input type="password" placeholder="Введіть ваш пароль" id="password" name="password" required>
+      </div>
+      <div class="form-row">
+        <label for="confirm_password">Підтвердження пароля:</label>
+        <input type="password" placeholder="Підтвердіть ваш пароль"  id="confirm_password" name="confirm_password" required>
+
+       
+          <label>Стать:</label>
+          <div class="form-row">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Чоловік</label>
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Жінка</label>
+        </div>
+          <div class="form-row">
+          <label for="age">Вік:</label>
+          <input type="number" id="age" name="age"  min="10" max="99" required>
+        </div>
+
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Вибір курсу</legend>
+      <div class="form-row">
+        <label for="course">Курс:</label>
+        <select id="course" name="course" required>
+          <option value="">Оберіть курс</option>
+          <option value="Front-End">Front-End</option>
+          <option value="Back-End">Back-End</option>
+          <option value="Project Management">Project Management</option>
+          <option value="QA Manual">QA Manual</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Вибір кольору сторінки</legend>
+        <div class="form-row">
+        <label for="color">Оберіть колір сторінки у персональному кабінеті:</label>
+        <input type="color" id="color" name="color">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Вибір дати початку навчання</legend>
+      <div class="form-row">
+        <label for="date">Оберіть дату початку навчання:</label>
+        <input type="date" id="date" name="date">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Адреса проживання</legend>
+      <div class="form-row">
+        <label for="address">Повна адреса проживання:</label>
+        <textarea id="address" placeholder="Введіть вашу адресу проживання" name="address" cols="50" required></textarea>
+      </div>
+    </fieldset>
+
+
+    <fieldset>
+      
+        <legend>Умови конфіденційності</legend>
+        <div class="form-row">
+        <label for="agree">Погодження з умовами конфіденційності:</label>
+        <input type="checkbox" id="agree" name="agree" required>
+    </fieldset>
+    </div>
+  <div class="button">
+    <input type="reset" value="Очистити форму" class="button-reset">
+    <button type="submit" value="Зареєструватись" class="button-submit">Зареєструватись</button> 
+  </div>
+  </form>
+
+  <!-- <form action="#" target="_blank" method="post" enctype="multipart/form-data"> -->
+  <!-- <input type="file" name="avatar"> -->
+  <!-- <input type="text" name="username" value="" data-required> -->
+  <!-- <br> -->
+  <!-- <input type="email" name="email" placeholder="username@com"> -->
+  <!-- <br> -->
+  <!-- <label> -->
+  <!-- <input type="checkbox" name="skills[]" value="html" checked>HTML -->
+  <!-- <input type="checkbox" name="skills[]" value="css">CSS -->
+  <!-- <input type="checkbox" name="skills[]" value="JS">JS -->
+  <!-- </label> -->
+  <!-- <br> -->
+  <!-- <select name="skills-list" id="skills-list"> -->
+  <!-- <option value="html">HTML</option> -->
+  <!-- <option value="css">CSS</option> -->
+  <!-- <option value="js">JS</option> -->
+  <!-- </select>   -->
+  <!-- <button type="submit">submit</button> -->
+  <!-- </form> -->
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: 'Roboto Regular';
+  src: local('Roboto Regular'), url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Roboto Medium';
+  src: local('Roboto Medium'), url('../fonts/Roboto-Medium.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Inter Regular';
+  src: local('Inter Regular'), url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+a,
+button {
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+
+}
+img{
+  vertical-align: top;
+  width: 100%;
+}
+.container{
+  margin: 0 auto;
+  width: min(90%, 570px);
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  outline: 2px solid #969696;
+  min-height: 80vh;
+  h2{
+    padding-bottom: 20px;
+    color: #1C1C1C;
+    font-family: 'Roboto Medium';
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+  }
+}
+.block-photo{
+display: flex;
+flex-wrap: nowrap;
+gap: 20px;
+width: 80%;
+margin-bottom: 20px;
+}
+.user-photo{
+  width: 80px;
+  aspect-ratio: 1;
+  img{
+    border-radius: 80px;
+  }
+}
+.add-file{
+  opacity: 1;
+  border: 2px solid #E4E4E4;
+  width: 138px;
+  height: 30px;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  .svg-photo{
+    position: absolute;
+    display: block;
+    top: 7px;
+    right: 8px;
+    cursor: pointer;
+  }
+input#file-upload-button{
+  opacity: 0;
+  cursor: pointer;
+}
+.add-file input[type="file"] {
+  opacity: 0;
+  cursor: pointer;
+ 
+}
+.photo .add-file:hover{
+  outline: 1px solid #4d90fe;
+}
+.sub-title{
+  color: #969696;
+  font-family: 'Roboto Regular';
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: -0.00625rem;
+  padding-top: 9px;
+}
+.photo{
+  position: relative;
+  .btn{
+    border: 2px solid #E4E4E4;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: -36px;
+    border-radius: 4px;
+    background-color: #fff;
+    &:hover{
+      outline: 1px solid #4d90fe;
+    }
+  }
+}
+.info{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+label{
+  color: #545454;
+  font-family: 'Roboto Regular';
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: -0.0125rem;
+  display: block; 
+  margin-bottom: 3px; 
+}
+
+input[type="text"], input[type="email"], input[type="password"],
+input[type="tel"], #country {
+  width: 245px;
+  height: 38px;
+  border: 2px solid #E4E4E4;
+  border-radius: 4px;
+  padding-left: 8px;
+}
+input:focus{
+  border: 1px solid #007BFF;
+}
+ .btn-submit{
+  width: 150px;
+  height: 38px;
+  background-color: #007BFF;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Roboto Medium';
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.375rem;  
+  letter-spacing: -0.00625rem;
+  padding: 8px 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  &:hover{
+    background-color: #FFF;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+  }
+}
+#country, option{
+  color: #545454;
+  font-family: 'Inter Regular';
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.375rem;  
+  letter-spacing: -0.0125rem;
+}
+select option{
+  margin-left: 10px;
+}
+ select {
+  appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 200px;
+  background: #fff url(../img/select.svg) right 10px top 10px no-repeat;
+ }
+
+ select:focus {
+  outline: 1px solid #4d90fe;
+}
+input[type="text"]:focus{
+  outline: 1px solid #4d90fe;
+}
+input[type="email"]:focus{
+  outline: 1px solid #4d90fe;
+}
+ input[type="password"]:focus{
+  outline: 1px solid #4d90fe;
+}
+input[type="tel"]:focus{
+  outline: 1px solid #4d90fe;
+}
+.last{
+  margin-bottom: 20px;
+}
+
+
+
+
+
+

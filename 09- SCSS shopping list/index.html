@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS shopping list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="https://flukeout.github.io/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/style.min.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>CSS Dinner Shopping List</h1>
+    <div class="subtitle">Let’s go to the mall!</div>
+  </header>
+
+  <main>
+    <div class="container">
+      <form action="post" action="#"></form>
+      <ul id="list">
+        <li>
+          <input type='checkbox' name="product[]" id="pickles">
+          <label for="pickles">
+            <span>
+              A lot of pickles
+              <small>
+                for the next lessons about CSS
+              </small>
+            </span>
+          </label>
+        </li>
+        <li>
+          <input type='checkbox' name="product[]" id="apples">
+          <label for="apples">
+            <span>
+              10 apples
+              <small>
+                for more CSS manipulations
+              </small>
+            </span>
+          </label>
+        </li>
+        <li>
+          <input type='checkbox' name="product[]" id="oranges">
+          <label for="oranges">
+            <span>
+              20 oranges
+              <small>
+                because they are awesome
+              </small>
+            </span>
+          </label>
+        </li>
+        <li>
+          <input type='checkbox' name="product[]" id="plates">
+          <label for="plates">
+            <span>
+              13 plates
+              <small>
+                hm... they always disappear
+              </small>
+            </span>
+          </label>
+        </li>
+        <li>
+          <input type='checkbox' name="product[]" id="bentos">
+          <label for="bentos">
+            <span>
+              15 bentos
+            </span>
+          </label>
+        </li>
+        <li>
+          <input type='checkbox' name="product[]" id="bottle">
+          <label for="bottle">
+            <span>
+              1 bottle of Sake
+              <small>
+                for my friends
+              </small>
+            </span>
+          </label>
+        </li>
+        <li>
+      </ul>
+      <div class="btn-wrapp">
+        <button type="submit" class="btn">Bon appétit :)</button>
+      </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

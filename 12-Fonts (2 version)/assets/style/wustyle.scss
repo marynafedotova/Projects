@@ -1,0 +1,165 @@
+@import 'template';
+@import '_fonts';
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+// header
+header{
+  background-color: #fff;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  align-items: center;
+  .header-container{
+    display: flex;
+    vertical-align: middle;
+  }
+}
+.container-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  position: relative;
+}
+a:hover{
+  color: #C0c0c0;
+  transition: all .2s ease;
+}
+
+.eng-title {
+  font-family: 'Tourney SemiBold';
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  letter-spacing: 0.0825rem;
+  margin-top: 2px;
+}
+.title-header {
+  font-family: 'Staatliches';
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0.04125rem;
+  text-transform: uppercase;
+
+}
+header .first{
+  padding-left: 51px;
+  padding-right: 10px;
+}
+header .second{
+  padding-right: 11px;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+// Who’s using
+main {
+  padding-top: 150px;
+  height: 100vh;
+}
+.title-block{
+  color: #000;
+  font-family: 'Roboto Bold';
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 3rem; 
+  letter-spacing: 0.09rem;
+  padding-left: 119px;
+// margin-bottom: 40px;
+&::before{
+  content: '';
+  width: 100px;
+  height: 8px;
+  background-color: #000;
+  position: absolute;
+  left: -1px;
+  top: 20px;
+  }
+}
+// galary
+.section-galary{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid #BFBFBF;
+  border-bottom: 1px solid #BFBFBF;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  padding: 20px 15px 19px;
+}
+
+.galary{
+   width: 270px;
+   aspect-ratio: 1.5;
+  //  height: 180px;
+   perspective: 1000px; 
+   
+ }
+
+ .galary-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all .5s ease;
+  // overflow: hidden;
+  // border-radius: 8px;
+  border: none;
+  transform-style: preserve-3d;
+  padding: 20px 15px;
+  }
+.galary-front, .galary-back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-origin: center;
+  border-radius: 8px;
+  // border-radius підсвічується чорним, не знаю як  прибрати
+  // border: .5px solid transparent;
+}
+.galary:hover .galary-item{
+  transform: rotateX(180deg);
+  transform-origin: center;
+}
+
+ .galary-back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  // filter: invert(100%);
+  z-index: -1;
+  transform: rotateX(180deg);
+  }
+ .galary-front{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E6E6E6;
+  // opacity: 0.7;
+  backface-visibility: hidden;
+  z-index: 1;
+  
+}
+
+img{
+  object-fit: contain;
+}

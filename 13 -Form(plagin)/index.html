@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+  <link rel="stylesheet" href="assets/plagins/css/select2.min.css">
+  <link rel="stylesheet" href="assets/style/style.min.css">
+</head>
+<body>
+  <div class="container">
+    <form action="#" method="get">
+    <h2>Create an Account</h2>
+    <div class="title-block">
+      <div class="left-block">
+        <label for="text_fn">First Name</label>
+        <input type="text">
+      </div>
+      <div class="right-block">
+        <label for="text_ln">Last Name</label>
+        <input type="text">
+      </div>
+      <div class="email">
+        <label for="">E-mail</label>
+        <input type="email" name="email" id="email">
+        <span class="sub-title">We'll never share your email with anyone else.</span>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="male" id="male">
+        <label for="male" class="male">Male</label>
+        <input type="checkbox" name="female" id="female">
+        <label for="female" class="female">Female</label>
+      </div>
+      <div class="info-location">
+        <div class="left-block">
+          <label for="">Country</label>
+          <select name="country" id="country" class="with-plagin">
+          <option value="Select">Select</option>
+          <option value="Australia">Australia</option>
+          <option value="Austria">Austria</option>
+          <option value="Albania">Albania</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Bulgaria">Bulgaria</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Greece">Greece</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Egypt">Egypt</option>
+          <option value="India">India</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Spain">Spain</option>
+          <option value="Italy">Italy</option>
+          <option value="Canada">Canada</option>
+          <option value="China">China</option>
+        </select>
+        </div>
+        <div class="right-block">
+          <label for="city">City</label>
+          <input type="text" id="city">
+        </div>
+      </div>
+          <button type="submit" class="submit">Sign Up</button>
+          <div class="link-block">
+          <span class="link">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a>
+            and <a href="#">Privacy Policy</a>.</span>
+          </div>
+            <div class="qwestion-bl">
+
+            
+            <div class="qwestion">Have an account?</div>
+            <div class="login"><a href="#">Log In</a></div>
+          </div>
+    </div>
+  </form>
+    <div>
+      <script src="assets/js/jquery-3.7.1.min.js"></script>
+      <script src="assets/plagins/js/select2.min.js"></script>
+      <script>
+        $(document).ready(function() {
+    $('.with-plagin').select2();
+    });
+      </script>
+</body>
+
+</html>

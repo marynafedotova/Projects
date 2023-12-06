@@ -1,0 +1,165 @@
+@import 'template';
+@import '_fonts';
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'PT Sans Regular';
+  // font-size: 1.75rem;
+  // font-weight: 400;
+  // line-height: 3rem;
+  
+}
+// header
+header .container {
+  display: flex;
+  padding-bottom: 40px;
+  margin-top: 48px;
+  align-items: center;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+.eng-title {
+  font-family: 'Tourney SemiBold';
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  letter-spacing: 0.0825rem;
+  margin-top: -6px;
+  margin-left: -2px;
+}
+.sub-title{
+  font-family: 'Farro';
+  font-size: 1.4rem;
+font-weight: 300;
+letter-spacing: 0.02rem;
+vertical-align: super;
+}
+.title-header {
+  font-family: 'Staatliches';
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0.04125rem;
+  text-transform: uppercase;
+}
+header .first{
+  padding-left: 50px;
+  padding-right: 10px;
+}
+header .second{
+  padding-right: 11px;
+}
+.logo{
+  padding-left: 601px;
+}
+
+// main
+.pt-sans{
+font-size: 1.75rem;
+font-weight: 400;
+line-height: 3rem;
+}
+.text-container{
+  margin-left: -4px;
+
+}
+.text-container .text .underline{
+  text-decoration: underline;
+}
+.sans-italic{
+font-family: 'PT Sans Italic';
+font-size: 1.75rem;
+font-style: italic;
+font-weight: 400;
+line-height: 3rem;
+}
+// bold
+.sans-bold{
+  font-family: 'PT Sans Bold';
+font-size: 1.75rem;
+font-weight: 700;
+line-height: 3rem;
+padding-right: 5px;
+}
+.pl{
+  margin-left: -5px;
+}
+
+.text-bg{
+  background-color: #C0c0c0;
+}
+#introduction, #corecomponents, #reactfundamentals, #handlingtext {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 39px;
+}
+// 
+// .text-container p .pb{
+  // padding-bottom: 20px;
+// }
+
+ul {
+  margin-top: 20px;
+}
+li {
+  padding-bottom: 30px;
+}
+.pad {
+  margin-bottom: 40px;
+}
+.mtop{
+  margin-top: 5px;
+}
+.text-container span, .pt-sans {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: 'Francois One';
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 3rem; /* 133.333% */
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+.text-container {
+  padding-bottom: 14px;
+}
+
+#introduction .title,
+#introduction .sub-title {
+  display: inline-block; 
+  padding-right: 10px;
+}
+#corecomponents .title,
+#corecomponents .sub-title{
+  display: inline-block;
+padding-right: 10px;
+}
+
+#reactfundamentals .title,
+#reactfundamentals .sub-title{
+  display: inline-block;
+  padding-right: 10px;
+}
+
+#handlingtext .title,
+#handlingtext .sub-title{
+  display: inline-block;
+  padding-right: 10px;
+}
+#handlingtext{
+  margin-top: -28px;
+}
+
+.last {
+  margin-bottom: 90px;
+}
+.martop{
+  margin-top: -11px;
+}

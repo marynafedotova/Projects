@@ -15,58 +15,58 @@ body{
   font-family: 'Delius Unicase', cursive;
   background-color: #fff; 
 }
-
-// hover
-// .hover-container{
-  // position:relative;
-// border-radius: 20px;
-// &:hover img{
-  // scale: 1.2;
-  // opacity: 1;
-  // border-radius: 20px;
-// }
-// &:hover .icons-left, .icons-right{
-  // opacity: 1;
-  // display: flex;
-  // }
-// }
-// 
 .hover-container {
-  position: relative;
-  border-radius: 20px;
+position: relative;
+overflow: hidden;
+border-radius: 20px;
+  .icons {
+    position: relative;
+    .icons-left{
+      position: absolute;
+      display: block;
+      top: -50px;
+      left: 20px;
+    }
+    .icons-right{
+      position: absolute;
+      display: block;
+      top: -50px;
+      right: 20px;
+    }
+  }
   img {
     border-radius: 20px;
-    border: 1px solid #E0E0E0;
     opacity: 0.7;
     transition: all .9s ease;
   }
-
   &:hover img{
     transform: scale(1.2);
     opacity: 1;
     border-radius: 20px;
-    &:hover  .icons .icons-left{
-      opacity: 1;
-      transform: scale(1.2);
-    }
-    &:hover .icons .icons-right{
-      opacity: 1;
-      transform: scale(1.2);
-    }
+  }
+  &:hover  .icons .icons-left{
+    opacity: 1;
+    transform: translateY(80px);
+    z-index: 10;
+  }
+  &:hover .icons .icons-right{
+    opacity: 1;
+    transform: translateY(80px);
+  z-index: 10;
   }
 }
 // иконки
-.icons {
-  position: relative;
-
-}
 .icons .icons-left{
 position: absolute;
 left: 10px;
 padding: 10px;
 top: 30px;
 background: rgba(224, 224, 224, 0.50);
-
+border: none;
+border-radius: 8px;
+    &:hover{
+      background-color: #E0E0E0;
+    }
 }
 .icons .icons-right{
 position: absolute;
@@ -74,21 +74,18 @@ top: 30px;
 right: 20px;
 padding: 10px;
 background: rgba(224, 224, 224, 0.50);
+border: none;
+border-radius: 8px;
+  &:hover{
+    background-color: #E0E0E0;
+  }
 }
 
 .photo{
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  
-  
-  
-  
-  
-  
-  
-  
-  }
+position: relative;
+overflow: hidden;
+border-radius: 20px;
+}
 
 
 // main

@@ -34,14 +34,17 @@ img{
   vertical-align: top;
   width: 100%;
 }
+body{
+  padding-top: 55px;
+}
 .container{
   margin: 0 auto;
   width: min(90%, 570px);
   padding-top: 35px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 37px;
+  padding-right: 33px;
   outline: 2px solid #969696;
-  min-height: 80vh;
+  min-height: 65vh;
   h2{
     padding-bottom: 20px;
     color: #1C1C1C;
@@ -62,6 +65,7 @@ margin-bottom: 20px;
 .user-photo{
   width: 80px;
   aspect-ratio: 1;
+  margin-left: 1px;
   img{
     border-radius: 80px;
   }
@@ -74,12 +78,13 @@ margin-bottom: 20px;
   position: relative;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
   }
   .svg-photo{
     position: absolute;
     display: block;
     top: 7px;
-    right: 8px;
+    right: 6px;
     cursor: pointer;
   }
 input#file-upload-button{
@@ -117,6 +122,8 @@ input#file-upload-button{
     right: -36px;
     border-radius: 4px;
     background-color: #fff;
+    margin-top: 10px;
+    margin-left: 1px;
     &:hover{
       outline: 1px solid #4d90fe;
     }
@@ -135,7 +142,7 @@ label{
   line-height: 1.375rem;
   letter-spacing: -0.0125rem;
   display: block; 
-  margin-bottom: 3px; 
+  margin-bottom: 7px; 
 }
 
 input[type="text"], input[type="email"], input[type="password"],
@@ -149,7 +156,13 @@ input[type="tel"], #country {
 input:focus{
   border: 1px solid #007BFF;
 }
+
+input[type="text"], input[type="email"]{
+  margin-bottom: 10px;
+}
+
  .btn-submit{
+  margin-top: -10px;
   width: 150px;
   height: 38px;
   background-color: #007BFF;
@@ -189,7 +202,7 @@ select option{
   border-radius: 4px;
   background-color: #fff;
   width: 200px;
-  background: #fff url(../img/select.svg) right 10px top 10px no-repeat;
+  background: #fff url(../img/select.svg) right 8px top 8px no-repeat;
  }
 
  select:focus {

@@ -34,15 +34,14 @@ border-radius: 20px;
       right: 20px;
     }
   }
-  img {
-    border-radius: 20px;
+  .overlay img {
     opacity: 0.7;
     transition: all .9s ease;
   }
   &:hover img{
     transform: scale(1.2);
     opacity: 1;
-    border-radius: 20px;
+  
   }
   &:hover  .icons .icons-left{
     opacity: 1;
@@ -52,9 +51,38 @@ border-radius: 20px;
   &:hover .icons .icons-right{
     opacity: 1;
     transform: translateY(80px);
-  z-index: 10;
+    z-index: 10;
   }
 }
+
+.overlay {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  z-index: 1;
+  transition: height 0.5s ease; 
+  }
+  .hover-container:hover .overlay::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+    transition: height 0.5s ease; 
+    }
 // иконки
 .icons .icons-left{
 position: absolute;
@@ -109,14 +137,14 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 30px;
-    padding-bottom: 110px; 
+    padding-bottom: 120px; 
     
 }
 }
 .name{
   position: absolute;
   left: 20px;
-  bottom: 40px;
+  bottom: 20px;
   color: #FFF;
   font-family: 'Roboto Medium';
   font-size: 1.25rem;
@@ -128,7 +156,7 @@ main{
   color: #FFF;
   position: absolute;
   right: 20px;
-  bottom: 40px;
+  bottom: 20px;
   font-family: 'Roboto Regular';
   font-size: 1.25rem;
   font-weight: 400;

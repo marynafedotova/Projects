@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <form action="#" method="get">
+    <form action="#" target="_blank" method="post" enctype="multipart/form-data" id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
     <h2>Create an Account</h2>
     <div class="title-block">
       <div class="left-block">
@@ -25,12 +25,12 @@
         <input type="email" name="email" id="email">
         <span class="sub-title">We'll never share your email with anyone else.</span>
       </div>
-      <div class="checkbox">
-        <input type="radio" name="male" id="male">
+     <div class="radio">
+        <input type="radio" name="gender" id="male">
         <label for="male" class="male">Male</label>
-        <input type="radio" name="female" id="female">
+        <input type="radio" name="gender" id="female">
         <label for="female" class="female">Female</label>
-      </div>
+     </div>
       <div class="info-location">
         <div class="left-block">
           <label for="">Country</label>
@@ -60,14 +60,14 @@
       </div>
           <button type="submit" class="submit">Sign Up</button>
           <div class="link-block">
-          <span class="link">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a>
-            and <a href="#">Privacy Policy</a>.</span>
+          <span class="link">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#"  target="_blank" rel="noreferrer">Terms of Use</a>
+            and <a href="#" target="_blank" rel="noreferrer">Privacy Policy</a>.</span>
           </div>
             <div class="qwestion-bl">
 
             
             <div class="qwestion">Have an account?</div>
-            <div class="login"><a href="#">Log In</a></div>
+            <div class="login"><a href="#"  target="_blank" rel="noreferrer">Log In</a></div>
           </div>
     </div>
   </form>

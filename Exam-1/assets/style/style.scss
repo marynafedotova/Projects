@@ -1,3 +1,108 @@
+$dark-blue: #262A3F;
+$black: #000;
+$text-green: #85BBB1;
+$text-read: #F1897B;
+$wite: #FFF;
+$gray-color:#E4E4E4;
+
+@font-face {
+  font-family: 'Playfair Display Regular';
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display Italic';
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato Light';
+  src: local('Lato Light'), local('Lato-Light'), url('../fonts/lato/latolight.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/lato/latoregular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Italic'), local('Lato-Italic'), url('../fonts/lato/latoitalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Medium'), local('Lato-Medium'), url('../fonts/lato/latomedium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Medium Italic'), local('Lato-MediumItalic'), url('../fonts/lato/latomediumitalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Semibold'), local('Lato-Semibold'), url('../fonts/lato/latosemibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Semibold Italic'), local('Lato-SemiboldItalic'), url('../fonts/lato/latosemibolditalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato Bold';
+  src: local('Lato Bold'), local('Lato-Bold'), url('../fonts/lato/latobold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url('../fonts/lato/latobolditalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Heavy'), local('Lato-Heavy'), url('../fonts/lato/latoheavy.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Heavy Italic'), local('Lato-HeavyItalic'), url('../fonts/lato/latoheavyitalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Black'), local('Lato-Black'), url('../fonts/lato/latoblack.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url('../fonts/lato/latoblackitalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
 *, *::before, *::after{
   padding: 0;
   margin: 0;
@@ -21,8 +126,9 @@ img{
   object-fit: cover;
 }
 .container{
-  width: min(90%, 1400px);
+  width: min(90%, 1170px);
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 body {
@@ -36,6 +142,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: url(../img/first-screen-image.png) left top no-repeat;
+  background-size: contain;
 }
 
 header{
@@ -44,8 +152,307 @@ header{
   top: 0;
   width: 100%;
   z-index: 10;
+  padding-top: 54px;
+  .nav-container .container{
+    display: flex;
+    
+  }
+  nav ul li{
+    display: inline-block;
+    padding-right: 30px;
+    vertical-align: middle;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    a{
+      text-decoration: none;
+      color: $dark-blue;
+      font-family: 'Lato Regular';
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.5rem; 
+      letter-spacing: 0.07rem;
+    }
+  }
+}
+.nav-container{
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(255, 255, 255, 0.00) 47.19%), rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(4.5px);
+
+}
+.logo{
+  width: 107.2px;
+  height: 32px;
+  position: relative;
+  top: 28px;
 }
 
 main{
   flex-grow: 1;
 }
+
+.hero-section{
+  width: min(50%, 523px);
+  padding-top: 300px;
+  margin-bottom: 150px;
+  h1{
+    color: $dark-blue;
+    font-family: 'Playfair Display Regular';
+    font-size: 2.75rem;
+    font-weight: 400;
+    line-height: 3.25rem; 
+    margin-bottom: 20px;
+    .green-text{
+      color: $text-green;
+      font-family: 'Playfair Display Italic';
+      font-size: 2.75rem;
+      font-weight: 400;
+      line-height: 3.25rem;
+    }
+  }
+  .sub-title{
+    color: $dark-blue;
+    font-family: 'Lato Light';
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.625rem; 
+    margin-bottom: 50px;
+  }         
+}
+
+.join-now{
+  color: $text-read;
+  font-family: 'Lato Bold';
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25rem; 
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  &::after{
+    width: 112px;
+    position: absolute;
+    height: 13px;
+    display: block;
+    content: '';
+    opacity: 0.3;
+    background: $text-read;
+    left: 10px;
+    top: 11px;
+  }
+}
+// sales-section
+.sales-section{
+  display: flex;
+  margin-bottom: 150px;
+  .sales-img{
+    background: linear-gradient(0deg, rgba(33, 36, 54, 0.50) 0.64%, rgba(33, 36, 54, 0.00) 94.04%), url(<path-to-image>), lightgray 0px -54.849px / 100% 113.817% no-repeat;
+    width: min(50%, 570px);
+    z-index: 0;
+  }
+  .sales-block{
+    background: rgba(255, 255, 255, 0.904);
+    display: flex;
+    position: absolute;
+    right: 247px;
+    z-index: 1;
+    gap: 56px;
+    width: min(60%, 770px);
+    margin-top: 45px;
+    padding-left: 85px;
+    padding-top: 45px;
+    margin-bottom: 45px;
+    .left-block{
+      width: min(45%, 300px);
+    }
+
+    .left-block .block-item{
+      color: $dark-blue;
+      text-align: center;
+      font-family: 'Playfair Display Regular';
+      font-size: 4.25rem;
+      font-weight: 400;
+      line-height: 4.5rem; 
+      margin-bottom: 12px;
+      }
+      .dollar{
+        color: $gray-color;
+        text-align: center;
+        font-family: 'Playfair Display Regular';
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 3.125rem; 
+      }
+    }
+    .left-block {
+      .block-subtitle{
+        color: $dark-blue;
+        font-family: 'Lato Light';
+        font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 1.625rem;
+        text-align: center;
+        margin-bottom: 80px;
+        opacity: 0.8;
+      }
+    }    
+    .right-block{
+      width: min(45%, 400px);
+      .text{
+        font-size: 1.125rem;
+        color: $dark-blue;
+        font-family: 'Lato Light';
+        font-weight: 300;
+        line-height: 1.625rem;  
+        opacity: 0.8;
+        margin-bottom: 20px;
+        
+        
+        
+      }
+    }
+  }
+.sales-block .left-block .last{
+    padding-bottom: 45px;
+    color: $dark-blue;
+    font-family: 'Lato Light';
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.625rem;
+    text-align: center;
+    margin-bottom: 80px;
+    opacity: 0.8;
+  }
+  
+.sales-block .right-block .api{
+    margin-bottom: 50px;
+    font-size: 1.125rem;
+    color: $dark-blue;
+    font-family: 'Lato Light';
+    font-weight: 300;
+    line-height: 1.625rem;  
+    opacity: 0.8;
+    margin-bottom: 50px;
+  }
+.left-block .middle{
+  &::before{
+  width: 100px;
+  height: 1px;
+  display: inline-block;
+  content: '';
+  top: 200px;
+  left: 190px;
+  position: absolute;
+  z-index: 20;
+  background-color: $text-green;
+  }
+  &::after{
+    width: 100px;
+    height: 1px;
+    display: inline-block;
+    content: '';
+    top: 400px;
+    left: 190px;
+    position: absolute;
+    z-index: 20;
+    background-color: $text-green;
+    }
+}
+.sales-button{
+  color: $text-read;
+  font-family: 'Lato Bold';
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25rem; 
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  border: none;
+  background-color: $wite;
+  &::after{
+    width: 172px;
+    position: absolute;
+    height: 13px;
+    display: block;
+    content: '';
+    opacity: 0.3;
+    background: $text-read;
+    left: 10px;
+    top: 11px;
+  }
+}
+
+// solution block
+.solution-block{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 65px;
+  margin-bottom: 120px;
+  .solution{
+    padding: 20px 30px;
+    width: min(40%, 510px);
+    .solution-title{
+      color: $dark-blue;
+      font-family: 'Playfair Display Regular';
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 3rem;
+      margin-bottom: 30px;
+    }
+    .solution-subtitle{
+      color: $dark-blue;
+      font-family: 'Lato Light';
+      font-size: 1.125rem;
+      font-weight: 300;
+      line-height: 1.625rem;
+      opacity: 0.8; 
+    }
+  } 
+}
+
+.green{
+color: $text-green;
+font-family: 'Playfair Display Italic';
+font-size: 2.5rem;
+font-weight: 400;
+line-height: 3rem;
+}
+
+.quote-block{
+  background-image: url(../img/quote-background.png);
+  padding-left: 160px;
+  padding-right: 300px;
+  padding-top: 100px;
+  .quote-text{
+    color: $wite;
+    font-family: 'Lato Regular';
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.875rem; 
+    letter-spacing: 0.08rem;
+    padding-bottom: 40px;
+    &::before{
+
+
+
+    
+      
+      
+      
+    }
+  }
+  .quote-subtitle{
+    color: $wite;
+    font-family: 'Playfair Display Italic';
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0.1rem;
+    padding-bottom: 100px;
+  }
+
+}
+

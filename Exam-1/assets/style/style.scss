@@ -4,6 +4,8 @@ $text-green: #85BBB1;
 $text-read: #F1897B;
 $wite: #FFF;
 $gray-color:#E4E4E4;
+$light-blue: #586291;
+
 
 @font-face {
   font-family: 'Playfair Display Regular';
@@ -163,6 +165,7 @@ header{
     vertical-align: middle;
     padding-top: 28px;
     padding-bottom: 28px;
+    transition: all 0.3 ease;
     a{
       text-decoration: none;
       color: $dark-blue;
@@ -230,6 +233,7 @@ main{
   position: relative;
   border: none;
   background-color: transparent;
+  transition: all 0.3 ease;
   &::after{
     width: 112px;
     position: absolute;
@@ -370,6 +374,7 @@ main{
   position: relative;
   border: none;
   background-color: $wite;
+  transition: all 0.3 ease;
   &::after{
     width: 172px;
     position: absolute;
@@ -426,6 +431,7 @@ line-height: 3rem;
   padding-left: 160px;
   padding-right: 300px;
   padding-top: 100px;
+  margin-bottom: 120px;
   .quote-text{
     color: $wite;
     font-family: 'Lato Regular';
@@ -434,14 +440,7 @@ line-height: 3rem;
     line-height: 2.875rem; 
     letter-spacing: 0.08rem;
     padding-bottom: 40px;
-    &::before{
-
-
-
     
-      
-      
-      
     }
   }
   .quote-subtitle{
@@ -454,5 +453,69 @@ line-height: 3rem;
     padding-bottom: 100px;
   }
 
+blockquote{
+  svg{
+    position: absolute;
+    left: 355px;
+    top: 2310px;
+  }
 }
 
+// video-block
+.video-container {
+  border-radius: 32px;
+  position: relative;
+  padding-bottom: 56.25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 870px;
+  height: 539px;
+  padding: 31px 30px;
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    z-index: 111;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: $light-blue;
+    opacity: 0.3;
+    top: 50%;
+    left: 50%;
+    
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    border-left: 32px solid transparent; 
+    border-right: 32px solid transparent;
+    border-top: 55px solid $dark-blue;
+    z-index: 112;
+    top: 50%; 
+    left: 50%;
+    rotate: -90deg;
+  }
+}
+
+
+// .video-container iframe {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 870px;
+//   height: 539px;
+//   border-radius: 8px;
+//   border: 1px solid $gray-color;
+//   padding: 31px 30px;
+  
+// }
+
+  .video-title{
+  margin-top: 100px;
+}

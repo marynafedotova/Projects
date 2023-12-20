@@ -1,3 +1,4 @@
+@import '_hamburger.scss';
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +16,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: var(--var-colors-fonts-hover);
 }
+
 
 
 .container {
@@ -36,12 +38,97 @@ li {
 img{
   vertical-align: top;
 }
+.page-overlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color:  rgba(#0000, .7);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+
+.menu-panel{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: #F90;
+  z-index: 1001;
+  transform: translateX(-100%);
+  transition: all .3s ease;
+  .panel-top{
+    height: 100px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darken(#F90, 10%);
+    .hamburger-wrap{
+      margin-left: -140px;
+    }
+  }
+  nav{
+    overflow: hidden;
+    height: calc(100vh - 100px);
+  }
+}
+.mobile-menu{
+  display: flex;
+  flex-direction: column;
+  a{
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 20px 40px;
+    color: --var-color-headings;
+    transition: all .3s ease;
+    &:hover {
+    color: var(--var-text-buttom);
+    text-decoration: underline;
+    }
+  }
+  
+}
+.menu-panel .nav-button{
+  padding-left: 40px;
+ 
+  .button-in{
+    margin-left: 0px;
+  }
+  .button-up{
+    background-color: #94928f;
+    padding-left: 22px;
+    padding-right: 22px;
+    &:hover{
+      background-color: #fff;
+      color: #2F281E;
+    }
+  }
+  .button-in{
+    border: 1 px solid --var-color-headings;
+    &:hover{
+      background-color: #2F281E;
+      color: #FFF;
+    }
+  
+  }
+}
+
 header{
   padding-top: 11px;
   padding-bottom: 85px;
+  .container{
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 .logo{
-padding-right: 198px;
+padding-right: 100px;
 }
 .navigation nav ul {
   list-style: none;
@@ -71,7 +158,8 @@ nav li a:hover {
 
 }
 .nav-button{
-padding-left: 156px;
+padding-left: 50px;
+margin-right: 40px;
 }
 .button-in {
   padding: 13px 25px;
@@ -545,6 +633,14 @@ color: #FFF;
   }
 }
 
-
+.open-mobile-menu{
+  .page-overlay{
+    opacity: 10;
+    visibility: visible;
+  }
+  .menu-panel{
+    transform: translateX(0);
+  }
+}
 
 

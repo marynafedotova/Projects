@@ -39,12 +39,12 @@
     </div>
     <nav>
       <ul class="mobile-menu">
-        <li><a href="#" target="_blank" rel="nofollow">Home</a></li>
-        <li><a href="#about" target="_blank" rel="nofollow">About</a></li>
-        <li><a href="#products" target="_blank" rel="nofollow">Products</a></li>
-        <li><a href="#use_case" target="_blank" rel="nofollow">Use Cases</a></li>
-        <li><a href="#pricing" target="_blank" rel="nofollow">Pricing</a></li>
-        <li><a href="#resources" target="_blank" rel="nofollow">Resources</a></li>
+        <li><a href="#" target="_parent">Home</a></li>
+        <li><a href="#about" target="_parent" >About</a></li>
+        <li><a href="#products" target="_parent">Products</a></li>
+        <li><a href="#use_case" target="_parent" >Use Cases</a></li>
+        <li><a href="#pricing" target="_parent" >Pricing</a></li>
+        <li><a href="#resources" target="_parent" >Resources</a></li>
       </ul>
     </nav>
   </div>
@@ -56,19 +56,17 @@
           </div>
           <nav>
             <ul>
-              <li><a href="#" target="_parent" rel="nofollow">Home</a></li>
-              <li><a href="#about" target="_parent" rel="nofollow">About</a></li>
-              <li><a href="#products" target="_parent" rel="nofollow">Products</a></li>
-              <li><a href="#use_cases" target="_parent" rel="nofollow">Use Cases</a></li>
-              <li><a href="#pricing" target="_parent" rel="nofollow">Pricing</a></li>
-              <li><a href="#resources" target="_parent" rel="nofollow">Resources</a></li>
-              <li>
-                <div class="theme">
-                  <input type="checkbox" name="dark_theme" id="theme_swith">
-                </div>
-              </li>
+              <li><a href="#" target="_parent" >Home</a></li>
+              <li><a href="#about" target="_parent" >About</a></li>
+              <li><a href="#products" target="_parent">Products</a></li>
+              <li><a href="#use_cases" target="_parent" >Use Cases</a></li>
+              <li><a href="#pricing" target="_parent">Pricing</a></li>
+              <li><a href="#resources" target="_parent">Resources</a></li>
             </ul>
           </nav>
+          <div class="theme">
+            <input type="checkbox" name="dark_theme" id="theme_swith">
+          </div>
           <div class="hamburger-wrap">
             <button id="hamb-btn" class="hamburger hamburger--squeeze" type="button">
               <span class="hamburger-box">
@@ -119,7 +117,7 @@
         </div>
         <!-- solution block -->
         <div class="solution-block wow animate__animated animate__heartBeat" id="products">
-          <div class="solution border">
+          <div class="solution">
             <div class="solution-title">
               Qualified <span class="green">traders</span> and liquidty <span class="green">solutions</span>
             </div>
@@ -128,7 +126,7 @@
             </div>
           </div>
 
-          <div class="solution border">
+          <div class="solution">
             <div class="solution-title pt10">
               Settlement/OTC API and <span class="green">integration</span>
             </div>

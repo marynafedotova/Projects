@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap:
+
+Host: https://marynafedotova.github.io

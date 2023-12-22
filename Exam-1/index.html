@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assets/style/animate.min.css">
   <link rel="stylesheet" href="assets/style/style.min.css">
 </head>
 
@@ -12,7 +13,7 @@
   <div class="page-overlay"></div>
   <div class="menu-panel">
     <div class="panel-top">
-      <div class="logo"><a href="#"><img src="assets/img/Logo.png" alt="logo"></a></div>
+      <div class="logo"><a href="#"><img src="assets/img/logo.svg" alt="logo"></a></div>
       <div class="hamburger-wrap">
         <button id="hamb-btn-mobile" class="hamburger hamburger--squeeze is-active" type="button">
           <span class="hamburger-box">
@@ -24,11 +25,11 @@
     <nav>
       <ul class="mobile-menu">
         <li><a href="#" target="_blank" rel="nofollow">Home</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">About</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">Products</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">Use Cases</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">Pricing</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">Resources</a></li>
+        <li><a href="#about" target="_blank" rel="nofollow">About</a></li>
+        <li><a href="#products" target="_blank" rel="nofollow">Products</a></li>
+        <li><a href="#use_case" target="_blank" rel="nofollow">Use Cases</a></li>
+        <li><a href="#pricing" target="_blank" rel="nofollow">Pricing</a></li>
+        <li><a href="#resources" target="_blank" rel="nofollow">Resources</a></li>
       </ul>
     </nav>
   </div>
@@ -36,16 +37,16 @@
     <header>
       <div class="nav-container">
         <div class="container">
-          <div class="logo"><a href="#"><img src="assets/img/logo.png" alt="logo"></a>
+          <div class="logo"><a href="#"><img src="assets/img/logo.svg" alt="logo"></a>
           </div>
           <nav>
             <ul>
-              <li><a href="#" target="_blank" rel="nofollow">Home</a></li>
-              <li><a href="#" target="_blank" rel="nofollow">About</a></li>
-              <li><a href="#" target="_blank" rel="nofollow">Products</a></li>
-              <li><a href="#" target="_blank" rel="nofollow">Use Cases</a></li>
-              <li><a href="#" target="_blank" rel="nofollow">Pricing</a></li>
-              <li><a href="#" target="_blank" rel="nofollow">Resources</a></li>
+              <li><a href="#" target="_parent" rel="nofollow">Home</a></li>
+              <li><a href="#about" target="_parent" rel="nofollow">About</a></li>
+              <li><a href="#products" target="_parent" rel="nofollow">Products</a></li>
+              <li><a href="#use_cases" target="_parent" rel="nofollow">Use Cases</a></li>
+              <li><a href="#pricing" target="_parent" rel="nofollow">Pricing</a></li>
+              <li><a href="#resources" target="_parent" rel="nofollow">Resources</a></li>
               <li>
                 <div class="theme">
                 <input type="checkbox" name="dark_theme" id="theme_swith">
@@ -65,21 +66,19 @@
     </header>
     <main>
       <div class="container">
-        <div class="hero-section">
+        <div class="hero-section wow animate__animated animate__flash">
           <h1>A peer-to-peer stablecoin <span class="green-text">clearinghouse</span> for the new economy</h1>
           <div class="sub-title">We are bringing real solutions to the payments world by leveraging public blockchains.
           </div>
-          <button type="button" class="join-now">JOIN NOW</button>
+          <a href="#contacts" class="join-now">JOIN NOW</a>
         </div>
-        <!-- sales-block -->
-        <div class="sales-section">
-          <div class="sales-img">
-            <picture>
-              <source src="assets/img/statistic-image-min.png">
-              <img src="assets/img/statistic-image-min.png" alt="">
-            </picture>
+        <!-- sales-block --> 
+        <div class="sales-section" id="pricing">
+          <div class="sales-img wow animate__animated animate__fadeInLeft">
+            <img class="lazy" src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" 
+            data-src="assets/img/statistic-image-min.png" alt="photo haus">
           </div>
-          <div class="sales-block">
+          <div class="sales-block wow animate__animated animate__fadeInRight">
             <div class="left-block">
               <div class="block-item"><span class="dollar">$</span> 1 tril</div>
               <div class="block-subtitle">Market cap potential</div>
@@ -99,12 +98,12 @@
               <div class="api">The API-enabled, centralized platform addresses the key issues of inconsistent liquidity,
                 stability and accessibility which are currently preventing the stablecoin market from reaching critical
                 mass. </div>
-              <button type="button" class="sales-button">Contact sales</button>
+              <a href="#contacts" class="sales-button">Contact sales</a>
             </div>
           </div>
         </div>
         <!-- solution block -->
-        <div class="solution-block">
+        <div class="solution-block wow animate__animated animate__heartBeat" id="products">
           <div class="solution border">
             <div class="solution-title">
               Qualified <span class="green">traders</span> and liquidty <span class="green">solutions</span>
@@ -145,7 +144,7 @@
           </div>
         </div>
         <!--  quote-block-->
-        <div class="quote-block">
+        <div class="quote-block wow animate__animated animate__backInUp" id="about">
           <blockquote>
             <div class="quote-text">
               Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders and exchanges certainty
@@ -155,17 +154,15 @@
             <div class="quote-subtitle">
               Lennon Burnett, Solis Group CEO
             </div>
-
           </blockquote>
         </div>
+      
         <!-- video-block -->
-        <div class="video-block">
+        <div class="video-block wow animate__animated animate__backInUp">
           <div class="video">
           <div class="video-container">
-            <picture>
-              <source src="assets/img/screensaver-video-min.png">
-              <img src="assets/img/screensaver-video-min.png" alt="screensaver-video">
-            </picture>
+            <img class="lazy" src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" 
+            data-src="assets/img/screensaver-video-min.png" alt="screensaver-video">
           </div>
         </div>
           <div class="video-title">A<span class="green"> powerful API </span>, easy to use user interface</div>
@@ -173,14 +170,13 @@
             transfers to deposits, withdrawals, creation and redemption and reporting.</div>
         </div>
         <!-- swaps block -->
-        <div class="swaps-block">
-          <div class="swaps-left-block">
-            <picture>
-              <source src="assets/img/features-background-image-min.png">
-              <img src="assets/img/features-background-image-min.png" alt="features-background-image">
-            </picture>
+       
+        <div class="swaps-block" id="resources">
+          <div class="swaps-left-block wow animate__animated animate__fadeInLeft">
+            <img class="lazy" src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" 
+            data-src="assets/img/features-background-image-min.png" alt="features-background-image">
           </div>
-          <div class="swaps-right-block">
+          <div class="swaps-right-block wow animate__animated animate__fadeInRight">
             <div class="swaps-item left">
             <div class="swaps-title">On-Exchange Trading</div>
             <div class="swaps-text">Instant</div>
@@ -195,18 +191,18 @@
             <div class="swaps-title">Time Settlement Swaps</div>
             <div class="swaps-text p20">LBTC / Lightning and other sidechain swaps</div>
           </div>
-            <div class="button"><button type="button" class="btn-big">JOIN NOW</button></div>
+            <div class="button"><a href="#contacts" class="btn-big">JOIN NOW</a></div>
           </div>
-
         </div>
+
         <!-- reviews block -->
-        <div class="reviews-block">
+        <div class="reviews-block" id="use_cases">
           <div class="reviews-title">Client <span class="green"> reviews</span></div>
           <div class="reviews-subtitle">Happy clients, happy us. Read our client reviews about the work process and
             results.</div>
           <ul>
             <li>
-              <blockquote class="reviews-lb">
+              <blockquote class="reviews-lb wow animate__animated animate__fadeInLeft">
               <div class="reviews-text">Solis did a great job. Whether providing direct development support or giving us
                 the opportunity to make our development updates, Solis's web design expertise and support services were
                 top notch! It didn't take long to stand up our website, and we were pleased with the design and layout
@@ -215,7 +211,7 @@
             </blockquote>
             </li>
             <li>
-              <blockquote class="reviews-cb">
+              <blockquote class="reviews-cb wow animate__animated animate__backInDown">
               <div class="reviews-text">Solis is a cutting edge company and knows the importance of excellence. Having
                 been in business for 21 years, I know when I've found a competent professional and more importantly a
                 company with integrity. I highly recommend this company and am available for further reference if
@@ -223,7 +219,7 @@
               <div class="autors">Evie-Rose Prosse</div>
             </blockquote>
             </li>
-            <li><blockquote class="reviews-rb"> 
+            <li><blockquote class="reviews-rb wow animate__animated animate__fadeInRight"> 
               <div class="reviews-text">I can’t say enough about how knowledgeable Toinette Rorie is in the area of Web
                 Development. She indeed is a developer and can build a site from scratch. She understands functionality
                 and is great at constructing a site that is robust and fully functioning. </div>
@@ -232,9 +228,8 @@
             </li>
           </ul>
         </div>
-
         <!-- contacts-block -->
-        <div class="contacts-block">
+        <div class="contacts-block wow animate__animated animate__backInDown" id="contacts">
           <div class="contacts-left">
             <div class="contacts-title">Contact <span class="green">our sales team</span></div>
             <div class="contacts-subtitle">Our team is happy to answer your sales questions.</div>
@@ -242,7 +237,7 @@
           </div>
         
           <div class="contacts-right">
-            <form action="#" method="post">              
+            <form  target="_blank" method="post" enctype="multipart/form-data" id="my_form">
               <div class="input-container">
                 <input type="text" name="name" id="name" class="input" placeholder=" ">
                 <label for="name" class="label">Your name</label>
@@ -255,7 +250,6 @@
                 <input type="text" name="tel" id="tel" class="input" placeholder=" ">
                 <label for="tel" class="label">Tell more</label>
               </div>
-             
               <button type="submit" class="join-now submit">SEND REQUEST</button>
             </form>
           </div>
@@ -263,7 +257,7 @@
       </div>
     </main>
     <footer>
-      <div class="container">
+      <div class="container wow animate__animated animate__backInUp">
         <div class="footer-block-left">© 2020 Solisgroup. All Rights Reserved.</div>
         <div class="footer-block-center">
           <div class="footer-block-left">made by</div>
@@ -287,6 +281,14 @@
       window.theme_swith.addEventListener('change', function(e){
         document.body.classList.toggle('dark-theme')
       })
+    </script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/lazyload.min.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({});
+    </script>
+    <script>
+       new WOW().init();
     </script>
   </div>
 </body>

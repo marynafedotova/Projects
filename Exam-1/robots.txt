@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap:
+Sitemap:https://marynafedotova.github.io/homework_128_2/Exam-1/sitemap.xml
 
 Host: https://marynafedotova.github.io

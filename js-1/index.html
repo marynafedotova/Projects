@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/style/style.min.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="container">
+        <h1>Основи JavaScript</h1>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="min">
+          <h2>Мінімум</h2>
+          <div>
+            <h3>Cпособи використання JS</h3>
+            <ul>
+              <li>&star;розміщення коду беспосередньо у html розмітці за допомогою тегів
+                &lt;sctipt&gt; та &lt;/sctipt&gt;;
+              </li>
+              <li>&star;підключення окремого файлу з кодом за допомогою атрибуту src для тегу &lt;sctipt&gt;;
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Mожливі способи коментування коду:</h3>
+            <ul>
+              <li>&star;однорядковий коментар виконується за допомогою // (двох слешів);</li>
+              <li>&star;багаторядковий коментар виконується за допомогою /* */;</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Cтилі написання імен змінних:</h3>
+            <ul>
+              <li>&star;<span class="type-name">camelCase:</span> перше слово починається з малої літери, кожне наступне слово починається з великої літери;
+              </li>
+              <li>&star;<span class="type-name">PascalCase:</span> кожне слово починається з великої літери, включаючи і перше;
+              </li>
+              <li>&star;<span class="type-name">snake_case:</span> усі літери малі, слова розділені символом підкреслення;</li>
+              <li>&star;<span class="type-name">kebab-case:</span> усі літери малі, слова розділені дефісами;</li>
+              <li>&star;<span class="type-name">UPPER_CASE:</span> усі літери великі, слова розділені підкресленням;</li>
+            </ul>
+          </div>
+        </section>
+        <section class="norm">
+          <h2>Норма</h2>
+          <ul>
+            <li>
+              1. Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
+              <div class="button"><button type="button" onclick="task1()" class="btn">TASK 1</button></div>
+            </li>
+            <li>2. Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як
+              константу;
+              <div><button type="button" onclick="task2()" class="btn">TASK 2</button></div>
+            </li>
+            <li>3. Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
+              <div><button type="button" onclick="task3()" class="btn">TASK 3</button></div>
+            </li>
+          </ul>
+        </section>
+        <section class="max">
+          <h2>Максимум</h2>
+          <ul>
+            <li>4. Запитай у користувача радіус кола і виведи площу такої окружності.
+              <div><button type="button" onclick="task4()" class="btn">TASK 4</button></div>
+            </li>
+            <li>5. Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися.
+              Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
+              <div><button type="button" onclick="task5()" class="btn">TASK 5</button></div>
+            </li>
+            <li>6. Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют
+              зберігається в константі.
+              <div><button type="button" onclick="task6()" class="btn">TASK 6</button></div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

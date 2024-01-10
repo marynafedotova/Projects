@@ -1,29 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="assets/style/style.min.css">
 </head>
+
 <body>
   <div class="page-wrapper">
     <header>
       <div class="container">
       </div>
     </header>
-        <main>
-
-        </main>
-
-        <footer>
-          <div class="container">
-
-          </div>
-        </footer>
-      
-    
+    <main>
+      <div class="container">
+        <section class="min">
+          <h2>Мінімум</h2>
+          <ul>
+            <li>
+              Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або
+              пенсіонером (60 ...), передбач можливість введення невірних даних.
+              <div><input type="number" name="age" id="age"> </div>
+              <div><button type="button" onclick="task1()" class="btn">Перевірити вік</button></div>
+              <div id="result1"></div>
+            </li>
+            <li>
+              Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3
+              # і т. д).
+              <div>
+                <input type="number" name="number" id="number"></div>
+              <div><button type="button" onclick="task2()" class="btn">Вивести спецсимвол</button>
+              </div>
+              <div id="result2"></div>
+            <li>
+              Підрахуй суму всіх числ в заданому користувачем діапазоні.
+              <div>Буль даска, введіть перше число</div>
+              <div><input type="number" name="num1" id="num1"></div> 
+              <div>Буль даска, введіть друге число</div>
+              <div><input type="number" name="num1" id="num2"></div> 
+              <div><button type="button" onclick="task3()" class="btn">Загальна сумма</button></div>
+              <div id="result3"></div>
+            </li>
+            <li>
+              Запитай у користувача 2 числа і знайди найбільший спільний дільник.
+              <div>Буль даска, введіть перше число</div>
+              <div><input type="number" name="num3" id="num3"></div> 
+              <div>Буль даска, введіть друге число</div>
+              <div><input type="number" name="num4" id="num4"></div> 
+              <div><button type="button" onclick="task4()" class="btn">Найбільший спільний дільник</button></div>
+              <div id="result4"></div>
+            </li>
+            <li>
+              Запитай у користувача число і виведи всі дільники цього числа.
+              <div><input type="number" name="num5" id="num5"></div> 
+              <div><button type="button" onclick="task5()" class="btn">Вивести дільники</button></div>
+              <div id="result5"></div>
+            </li>
+          </ul>
+        </section>
+        <section class="norm">
+          <h2>Норма</h2>
+          <ul>
+            <li>Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
+              <div><input type="number" name="num6" id="num6"></div> 
+              <div><button type="button" onclick="task6()" class="btn">Перевірка на поліндром</button></div>
+              <div id="result6"></div>
+            </li>
+            <li> Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
+              <ul>
+                <li>від 200 до 300 - знижка буде 3%;</li>
+                <li>від 300 до 500 - 5%;</li>
+                <li>від 500 і вище - 7%.</li>
+              </ul>
+              <div><input type="number" name="num7" id="num7"></div> 
+              <div><button type="button" onclick="task7()" class="btn">Порахувати знижку</button></div>
+              <div id="result7"></div>
+            </li>
+            <li>Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому також
+              порахуй, скільки з них парних і непарних. Виведи статистику на екран. Враховуй, що достатньо однієї змінної
+              (не 10) для введення чисел користувачем. 
+              <div><button type="button" onclick="task8()" class="btn">Перевірити числа</button></div>
+              <div id="result8"></div>
+            </li>
+            <li>Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір,
+              поки користувач натискає OK.
+              <div><button type="button" onclick="task9()" class="btn">Дні тижня</button></div>
+              <div id="result9"></div>
+            </li>
+          </ul>
+        </section>
+        <section class="max">
+          <h2>Максимум</h2>
+          <ul>
+            <li>Гра «Вгадай число». 
+              Будь ласка, загадайте число від 0 до 100, а гра спробує його відгадати.
+              <div><button type="button" onclick="task10()" class="btn">Грати в гру</button></div>
+              <div id="result10"></div>
+            </li>
+          <li>Виведи таблицю множення для всіх чисел від 2 до 9. Кожне число необхідно помножити на числа від 1 до 10.
+            <div><button type="button" onclick="task11()" class="btn">Tаблиця множення</button></div>
+            <div id="result11"></div>
+          </li>
+            <li>Запитай дату (день, місяць, рік) і виведи наступну за нею дату. Враховуй можливість переходу на наступний
+            місяць, рік, а також високосний рік.
+            <div>Введіть день, місяць, рік:</div>
+            <div>Введіть дату (дд.мм.рррр):</div>
+            <div><input type="number" name="day" id="day">
+              <input type="number" name="month" id="month">
+              <input type="number" name="year" id="year">
+            </div>
+            <div><button type="button" onclick="task12()" class="btn">Наступне число</button></div>
+            <div id="result12"></div>
+          </li>
+          </ul>        
+        </section>
+      </div>
+    </main>
   </div>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

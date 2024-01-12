@@ -20,25 +20,50 @@
           <h2>Мінімум</h2>
           <ul>
            <li>1.Напиши всі можливі варіанти створення функцій.</li>
-           <ul>
-            <li>вираз функції</li>
-            <li>декларація функції</li>
-            <li>стрілкова функція</li>
-           </ul>
-           <li>2.Створи функцію, яка буде виводити кількість переданих їй аргументів.
-            </li>
+            <ul>
+              <li>вираз функції</li>
+              <li>декларація функції</li>
+              <li>стрілкова функція</li>
+            </ul>
+            <li>2.Створи функцію, яка буде виводити кількість переданих їй аргументів.
+              <input type="text" name="arg" id="arg" placeholder="Будь ласка, введіть аргументи через кому">
+              <div>
+                  <button type="button" onclick="task2()" class="btn">Вивести кількість аргументів</button>
+              </div>
+              <div id="result2"></div>
+          </li>
+          
            <li>3.Напиши функцію, яка приймає 2 числа і повертає :
             -1, якщо перше число менше, ніж друге; 
             1 - якщо перше число більше, ніж друге; 
             0 - якщо числа рівні.
+            <input type="number" name="num1" id="num1" placeholder="Будь ласка, введіть зачення">
+            <input type="number" name="num2" id="num2" placeholder="Будь ласка, введіть зачення">
+              <div>
+                  <button type="button" onclick="task3()" class="btn">Порівняти числа</button>
+              </div>
+              <div id="result3"></div>
           </li>
-           <li>4.Напиши функцію, яка обчислює факторіал переданого їй числа.</li>
+           <li>4.Напиши функцію, яка обчислює факторіал переданого їй числа.
+            <input type="number" name="num4" id="num4" placeholder="Будь ласка, введіть зачення">
+            <div>
+              <button type="button" onclick="task4()" class="btn">Порахувати факторіал</button>
+          </div>
+          <div id="result4"></div>
+           </li>
            <li>5.Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
+            <input type="number" name="num4" id="num5" placeholder="Будь ласка, введіть коректні цифри від 0 до 9">
+            <input type="number" name="num4" id="num6" placeholder="Будь ласка, введіть коректні цифри від 0 до 9">
+            <input type="number" name="num4" id="num7" placeholder="Будь ласка, введіть коректні цифри від 0 до 9">
+            <div>
+              <button type="button" onclick="task5()" class="btn">Створити число</button>
+          </div>
+          <div id="result5"></div>
           </li>
           <li>6.Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.
           </li>
-              <div><button type="button" onclick="task1()" class="btn">Вивести дільники</button></div>
-              <div id="result5"></div>
+              
+              
             </li>
           </ul>
         </section>

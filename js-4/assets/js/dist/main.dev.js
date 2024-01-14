@@ -89,3 +89,85 @@ function task5() {
 function concatenateNumbers(digit1, digit2, digit3) {
   return parseInt("".concat(digit1).concat(digit2).concat(digit3));
 } //6
+
+
+function task6() {
+  var num8 = parseInt(document.getElementById("num8").value);
+  var num9 = parseInt(document.getElementById("num9").value);
+  var resultDiv = document.getElementById("result6");
+
+  if (!isNaN(num8) && !isNaN(num9) && num8 > 0 && num9 > 0) {
+    var areaValue = area(num8, num9);
+    resultDiv.innerHTML = "\u041F\u043B\u043E\u0449\u0430 ".concat(areaValue);
+  } else {
+    resultDiv.innerHTML = "Будь ласка, введіть коректне додатнє ціле число";
+  }
+
+  function area(a) {
+    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    return a * b;
+  }
+} //7
+
+
+function task7() {
+  var userNumber = parseInt(document.getElementById("num10").value);
+  var resultDiv = document.getElementById("result7");
+
+  if (isNaN(userNumber) || userNumber <= 0) {
+    resultDiv.innerHTML = "Введено некоректне або невірне число. Будь ласка, введіть додатне ціле число.";
+    return;
+  }
+
+  var denominatorSum = getDenominatorSum(userNumber);
+
+  if (denominatorSum === userNumber) {
+    resultDiv.innerHTML = "\u0427\u0438\u0441\u043B\u043E ".concat(userNumber, " \u0454 \u0434\u043E\u0441\u043A\u043E\u043D\u0430\u043B\u0438\u043C \u0447\u0438\u0441\u043B\u043E\u043C.");
+  } else {
+    resultDiv.innerHTML = "\u0427\u0438\u0441\u043B\u043E ".concat(userNumber, " \u043D\u0435 \u0454 \u0434\u043E\u0441\u043A\u043E\u043D\u0430\u043B\u0438\u043C \u0447\u0438\u0441\u043B\u043E\u043C.");
+  }
+}
+
+function getDenominatorSum(num) {
+  var sum = 0;
+
+  for (var i = 1; i <= num / 2; i++) {
+    if (num % i === 0) {
+      sum += i;
+    }
+  }
+
+  return sum;
+} //8
+
+
+function task8() {
+  var minRange = parseInt(document.getElementById("num11").value);
+  var maxRange = parseInt(document.getElementById("num12").value);
+  var resultDiv = document.getElementById("result8");
+
+  if (isNaN(minRange) || isNaN(maxRange) || minRange >= maxRange) {
+    resultDiv.innerHTML = "Введено некоректний діапазон. Будь ласка, введіть коректні мінімальне і максимальне значення.";
+    return;
+  }
+
+  var perfectNumbersInRange = findPerfectNumbers(minRange, maxRange);
+
+  if (perfectNumbersInRange.length > 0) {
+    resultDiv.innerHTML = "Досконалі числа в діапазоні: " + perfectNumbersInRange.join(", ");
+  } else {
+    resultDiv.innerHTML = "У вказаному діапазоні немає досконалих чисел.";
+  }
+}
+
+function findPerfectNumbers(min, max) {
+  var perfectNumbers = [];
+
+  for (var num = min; num <= max; num++) {
+    if (getDenominatorSum(num) === num) {
+      perfectNumbers.push(num);
+    }
+  }
+
+  return perfectNumbers;
+}

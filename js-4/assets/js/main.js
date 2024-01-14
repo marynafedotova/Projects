@@ -75,3 +75,70 @@ function concatenateNumbers(digit1, digit2, digit3) {
   return parseInt(`${digit1}${digit2}${digit3}`);
 }
 //6
+function task6() {
+  let num8 = parseInt(document.getElementById("num8").value);
+  let num9 = parseInt(document.getElementById("num9").value);
+  let resultDiv = document.getElementById("result6");
+
+  if (!isNaN(num8) && !isNaN(num9) && num8 > 0 && num9 > 0) {
+    let areaValue = area(num8, num9);
+    resultDiv.innerHTML = `Площа ${areaValue}`;
+  } else {
+    resultDiv.innerHTML = "Будь ласка, введіть коректне додатнє ціле число";
+  }
+
+function area(a, b = 0) {
+  return a * b;
+}
+}
+//7
+function task7() {
+  var userNumber = parseInt(document.getElementById("num10").value);
+  var resultDiv = document.getElementById("result7");
+  if (isNaN(userNumber) || userNumber <= 0) {
+    resultDiv.innerHTML = "Введено некоректне або невірне число. Будь ласка, введіть додатне ціле число.";
+    return;
+  }
+  var denominatorSum = getDenominatorSum(userNumber);
+  if (denominatorSum === userNumber) {
+    resultDiv.innerHTML = `Число ${userNumber} є досконалим числом.`;
+  } else {
+    resultDiv.innerHTML = `Число ${userNumber} не є досконалим числом.`;
+  }
+}
+
+function getDenominatorSum(num) {
+  var sum = 0;
+  for (var i = 1; i <= num / 2; i++) {
+    if (num % i === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+//8
+function task8() {
+  var minRange = parseInt(document.getElementById("num11").value);
+  var maxRange = parseInt(document.getElementById("num12").value);
+  var resultDiv = document.getElementById("result8");
+  if (isNaN(minRange) || isNaN(maxRange) || minRange >= maxRange) {
+    resultDiv.innerHTML = "Введено некоректний діапазон. Будь ласка, введіть коректні мінімальне і максимальне значення.";
+    return;
+  }
+  var perfectNumbersInRange = findPerfectNumbers(minRange, maxRange);
+  if (perfectNumbersInRange.length > 0) {
+    resultDiv.innerHTML = "Досконалі числа в діапазоні: " + perfectNumbersInRange.join(", ");
+  } else {
+    resultDiv.innerHTML = "У вказаному діапазоні немає досконалих чисел.";
+  }
+}
+function findPerfectNumbers(min, max) {
+  var perfectNumbers = [];
+  for (var num = min; num <= max; num++) {
+    if (getDenominatorSum(num) === num) {
+      perfectNumbers.push(num);
+    }
+  }
+  return perfectNumbers;
+}
+

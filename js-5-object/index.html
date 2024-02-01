@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Car & Time</title>
   <link rel="stylesheet" href="assets/style/style.min.css">
 </head>
+
 <body>
-  <div class="page-wrapper">
-    <header>
-      <div class="container">
-      </div>
-    </header>
-        <main>
-
-        </main>
-
-        <footer>
-          <div class="container">
-
-          </div>
-        </footer>
-      
-    
-  </div>
-  <script src="assets/js/main.js"></script>
+  <main>
+    <div class="container">
+      <section class="min">
+        <h2>Мінімум</h2>
+        <h4>Car іnformation</h4>
+        <div id="car-info">
+          <div id="manufacturer">Manufacturer</div>
+          <div id="model">Model</div>
+          <div id="year">Year</div>
+          <div id="averageSpeed">Average Speed</div>
+          <div id="fuelTankCapacity">Fuel Tank Capacity</div>
+          <div id="fuelConsumption">Fuel Consumption:</div>
+        </div>
+        <label for="distance">Distance (km):</label>
+        <input type="number" id="distance">
+        <label for="speed">Speed (km/h):</label>
+        <input type="number" id="speed">
+        <button type="button" class="btn" onclick="displayResults()">Calculate</button>
+        <div id="results"></div>
+      </section>
+      <section class="norm">
+        <h2>Норма</h2>
+        <div id="time-display"></div>
+        <ul>
+          <li><label for="hours">Hours:</label>
+            <input type="number" id="hours">
+            <button type="button" onclick="changeTimeHours()" class="btn">Change Hours</button>
+          </li>
+          <li><label for="minutes">Minutes:</label>
+            <input type="number" id="minutes">
+            <button type="button" onclick="changeTimeMinutes()" class="btn">Change Minutes</button>
+          </li>
+          <li><label for="seconds">Seconds:</label>
+            <input type="number" id="seconds">
+            <button type="button" onclick="changeTimeSeconds()" class="btn">Change Seconds</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </main>
 </body>
+
 </html>

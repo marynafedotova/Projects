@@ -1,3 +1,19 @@
+@font-face{
+  font-family: 'PT Sans Bold';
+  src: local('PT Sans Bold'), url('./fonts/PTSans-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PT Sans Italic';
+  src: local('PT Sans Italic'), url('./fonts/PTSans-Italic.woff2')  format('woff2');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'PT Sans Regular';
+  src: local('PT Sans Regular'), url('./fonts/PTSans-Regular.woff2')  format('woff2');
+  font-display: swap;
+}
+
 *, *::before, *::after{
   padding: 0;
   margin: 0;
@@ -8,11 +24,8 @@ button {
   transition: all .2s ease;
   cursor: pointer;
 }
-
-ul,
-ol {
+ul, ol{
   list-style: none;
-
 }
 img{
   vertical-align: top;
@@ -21,14 +34,17 @@ img{
   object-fit: cover;
 }
 .container{
-  width: min(90%, 1400px);
+  width: min(90%, 1170px);
   margin: 0 auto;
+  background-color: #fff;
 }
 
 body {
   font-family: sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+  background-color: rgb(226, 223, 223);
+  font-family: 'PT Sans Regular';
 }
 
 .page-wrapper{
@@ -36,16 +52,76 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
-header{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
 
 main{
   flex-grow: 1;
+  .container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .min, .norm, .max{
+      padding: 20px 50px;
+      border-bottom: 1px solid darkcyan;
+      ul li{
+        padding: 20px;
+      }
+      ul li div{
+        display: flex;
+        justify-content: space-between;
+      }
+      h2{
+        text-align: center;
+        color: cornflowerblue;
+        font-family: 'PT Sans Bold';
+      }
+    }
+    
+  }
+}
+h3{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: 'PT Sans Italic';
+}
+.type-name{
+  font-family: 'PT Sans Bold';
+  color: cadetblue;
+}
+
+.btn{
+  font-family: 'PT Sans Bold';
+  padding: 10px 30px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #1d4c81;
+  background-color: #417bbe;
+  color: aliceblue;
+  font-size: 1rem;
+  transition: all .3 ease;
+  &:hover{
+    background-color: aliceblue;
+    color: #417bbe;
+    border: 1px solid #152c47;
+  }
+}
+#result1, #result2, #result3, #result4, #result5, #result6, #result7, #result8, #result9, #result10, #result11, #result12 {
+  color: red;
+  text-decoration: underline;
+}
+input{
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+#time-display{
+  text-align: center;
+  font-size: 1.5rem;
+}
+label{
+  font-weight: bold;
 }

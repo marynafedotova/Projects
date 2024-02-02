@@ -49,3 +49,10 @@ header{
 main{
   flex-grow: 1;
 }
+
+.hidden {
+  display: none;
+}
+#editor-container {
+  margin-top: 20px;
+}

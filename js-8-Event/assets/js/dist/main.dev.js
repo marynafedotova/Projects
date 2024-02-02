@@ -1,22 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const editorContainer = document.createElement("div");
-  editorContainer.id = "editor-container";
+"use strict";
 
-  const textDisplay = document.createElement("div");
+document.addEventListener("DOMContentLoaded", function () {
+  var editorContainer = document.createElement("div");
+  editorContainer.id = "editor-container";
+  var textDisplay = document.createElement("div");
   textDisplay.id = "text-display";
   textDisplay.className = "display-mode";
-  textDisplay.innerText =
-    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit delectus rem accusamus et repellendus placeat aliquam temporibus quis! Distinctio quas delectus minima quia exercitationem facilis, neque excepturi molestiae deleniti voluptatum!";
-
-  const textEditor = document.createElement("textarea");
+  textDisplay.innerText = " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit delectus rem accusamus et repellendus placeat aliquam temporibus quis! Distinctio quas delectus minima quia exercitationem facilis, neque excepturi molestiae deleniti voluptatum!";
+  var textEditor = document.createElement("textarea");
   textEditor.id = "text-editor";
   textEditor.className = "edit-mode hidden";
-
   document.body.appendChild(editorContainer);
   editorContainer.appendChild(textDisplay);
   editorContainer.appendChild(textEditor);
-
-  let ctrlPressed = false;
+  var ctrlPressed = false;
 
   function preventDefaultAction(event) {
     if (event.ctrlKey && event.key === "e") {
@@ -26,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Переключення в режим перегляду
       switchMode("view");
     }
+
     event.preventDefault();
   }
 

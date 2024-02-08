@@ -1,5 +1,43 @@
 "use strict";
 
+//car
+var car = {
+  manufacturer: "Wolksvagen",
+  model: "Touareg",
+  year: 2022,
+  averageSpeed: 120,
+  fuelTankCapacity: 90,
+  fuelConsumption: 14,
+  displayInfo: function displayInfo() {
+    document.getElementById("manufacturer").textContent = "Manufacturer: ".concat(this.manufacturer);
+    document.getElementById("model").textContent = "Model: ".concat(this.model);
+    document.getElementById("year").textContent = "Year: ".concat(this.year);
+    document.getElementById("averageSpeed").textContent = "Average Speed: ".concat(this.averageSpeed, " km/h");
+    document.getElementById("fuelTankCapacity").textContent = "Fuel Tank Capacity:  ".concat(this.fuelTankCapacity, " liters");
+    document.getElementById("fuelConsumption").textContent = "Fuel Consumption: ".concat(this.fuelConsumption, " liters/100km");
+  },
+  calculateTimeAndFuel: function calculateTimeAndFuel(distance) {
+    var totalHours = Math.round(distance / this.averageSpeed * 100) / 100;
+    var breaks = Math.floor(totalHours / 4);
+    totalHours += breaks;
+    var totalFuel = distance / 100 * this.fuelConsumption;
+    return {
+      totalTime: totalHours,
+      totalFuel: totalFuel
+    };
+  }
+};
+
+function displayResults() {
+  var distance = parseFloat(document.getElementById("distance").value) || 0;
+  var result = car.calculateTimeAndFuel(distance);
+  var resultContainer = document.getElementById("results");
+  var resultHTML = "\n      <p>Total Time to cover ".concat(distance, " km: ").concat(result.totalTime, " hours</p>\n      <p>Total Fuel Needed: ").concat(result.totalFuel, " liters</p>\n  ");
+  resultContainer.innerHTML = resultHTML;
+}
+
+car.displayInfo(); //times
+
 var currentTime = {
   hours: 20,
   minutes: 59,
@@ -62,42 +100,4 @@ function changeTimeHours() {
   displayCurrentTime();
 }
 
-displayCurrentTime(); //car
-
-var car = {
-  manufacturer: "Wolksvagen",
-  model: "Touareg",
-  year: 2022,
-  averageSpeed: 120,
-  fuelTankCapacity: 90,
-  fuelConsumption: 14,
-  displayInfo: function displayInfo() {
-    document.getElementById("manufacturer").textContent = "Manufacturer: " + this.manufacturer;
-    document.getElementById("model").textContent = "Model: " + this.model;
-    document.getElementById("year").textContent = "Year: " + this.year;
-    document.getElementById("averageSpeed").textContent = "Average Speed: " + this.averageSpeed + " km/h";
-    document.getElementById("fuelTankCapacity").textContent = "Fuel Tank Capacity: " + this.fuelTankCapacity + " liters";
-    document.getElementById("fuelConsumption").textContent = "Fuel Consumption: " + this.fuelConsumption + " liters/100km";
-  },
-  calculateTimeAndFuel: function calculateTimeAndFuel(distance, speed) {
-    var totalHours = Math.round(distance / speed * 100) / 100;
-    var breaks = Math.floor(totalHours / 4);
-    totalHours += breaks;
-    var totalFuel = distance / 100 * this.fuelConsumption;
-    return {
-      totalTime: totalHours,
-      totalFuel: totalFuel
-    };
-  }
-};
-
-function displayResults() {
-  var distance = parseFloat(document.getElementById("distance").value) || 0;
-  var speed = parseFloat(document.getElementById("speed").value) || 0;
-  var result = car.calculateTimeAndFuel(distance, speed);
-  var resultContainer = document.getElementById("results");
-  var resultHTML = "\n      <p>Total Time to cover ".concat(distance, " km: ").concat(result.totalTime, " hours</p>\n      <p>Total Fuel Needed: ").concat(result.totalFuel, " liters</p>\n  ");
-  resultContainer.innerHTML = resultHTML;
-}
-
-car.displayInfo();
+displayCurrentTime();

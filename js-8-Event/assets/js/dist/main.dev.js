@@ -1,5 +1,6 @@
 "use strict";
 
+//1
 document.addEventListener("DOMContentLoaded", function () {
   var editorContainer = document.createElement("div");
   editorContainer.id = "editor-container";
@@ -17,14 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function preventDefaultAction(event) {
     if (event.ctrlKey && event.key === "e") {
-      // Переключення в режим редагування
       switchMode("edit");
+      event.preventDefault();
     } else if (event.ctrlKey && event.key === "s") {
-      // Переключення в режим перегляду
       switchMode("view");
+      event.preventDefault();
     }
-
-    event.preventDefault();
   }
 
   function handleKeyDown(event) {
@@ -43,9 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  document.addEventListener("keydown", handleKeyDown);
-  document.addEventListener("keyup", handleKeyUp);
-
   function switchMode(mode) {
     if (mode === "edit") {
       textDisplay.classList.add("hidden");
@@ -58,4 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
       textDisplay.classList.remove("hidden");
     }
   }
+
+  document.addEventListener("keydown", handleKeyDown);
+  document.addEventListener("keyup", handleKeyUp);
+}); //2
+
+document.addEventListener('DOMContentLoaded', function () {
+  var resizableBlock = document.createElement('div');
+  resizableBlock.id = 'resizableBlock';
+  var textArea = document.createElement('textarea');
+  textArea.id = 'textArea';
+  textArea.innerText = " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit delectus rem accusamus et repellendus placeat aliquam temporibus quis! Distinctio quas delectus minima quia exercitationem facilis, neque excepturi molestiae deleniti voluptatum!";
+  resizableBlock.appendChild(textArea);
+  document.body.appendChild(resizableBlock);
 });

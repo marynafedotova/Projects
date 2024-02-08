@@ -1,5 +1,6 @@
-let currentLightIndex = 0;
+let currentLightIndex = 2;
 const lights = document.querySelectorAll('.light');
+changeLight();
 function changeLight() {
   lights[currentLightIndex].classList.remove('active');
   currentLightIndex = (currentLightIndex + 1) % lights.length;
@@ -18,3 +19,4 @@ function updateColor() {
     lights[currentLightIndex].classList.add('green');
   }
 }
+updateColor();

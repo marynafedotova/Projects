@@ -1,7 +1,8 @@
 "use strict";
 
-var currentLightIndex = 0;
+var currentLightIndex = 2;
 var lights = document.querySelectorAll('.light');
+changeLight();
 
 function changeLight() {
   lights[currentLightIndex].classList.remove('active');
@@ -23,3 +24,5 @@ function updateColor() {
     lights[currentLightIndex].classList.add('green');
   }
 }
+
+updateColor();

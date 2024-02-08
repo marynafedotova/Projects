@@ -70,12 +70,12 @@ displayCurrentTime();
 
 //car
 let car = {
-  manufacturer: "Toyota",
-  model: "Camry",
+  manufacturer: "Wolksvagen",
+  model: "Touareg",
   year: 2022,
   averageSpeed: 120,
-  fuelTankCapacity: 60,
-  fuelConsumption: 8,
+  fuelTankCapacity: 90,
+  fuelConsumption: 14,
 
   displayInfo: function () {
     document.getElementById("manufacturer").textContent = "Manufacturer: " + this.manufacturer;

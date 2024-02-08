@@ -65,12 +65,12 @@ function changeTimeHours() {
 displayCurrentTime(); //car
 
 var car = {
-  manufacturer: "Toyota",
-  model: "Camry",
+  manufacturer: "Wolksvagen",
+  model: "Touareg",
   year: 2022,
   averageSpeed: 120,
-  fuelTankCapacity: 60,
-  fuelConsumption: 8,
+  fuelTankCapacity: 90,
+  fuelConsumption: 14,
   displayInfo: function displayInfo() {
     document.getElementById("manufacturer").textContent = "Manufacturer: " + this.manufacturer;
     document.getElementById("model").textContent = "Model: " + this.model;

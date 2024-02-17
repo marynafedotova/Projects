@@ -28,6 +28,7 @@ $(function() {
     verticalHeight: 800
   });
 });
+
 //wow
 new WOW().init();
 
@@ -46,7 +47,6 @@ function createSlider(elementId, jsonData) {
   const sliderContainer = $("#" + elementId);
   const ulElement = $("<ul></ul>");
   jsonData.forEach(item => {
-    // Створення елемента для слайда
     const slideElement = $(`
       <li>
         <div class="slide-top">

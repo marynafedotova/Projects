@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function createSlider(elementId, jsonData) {
   const sliderContainer = $("#" + elementId);
+  const customPrevHtml = '<span class="custom-prev-html">Previous</span>';
+  const customNextHtml = '<span class="custom-next-html">Next</span>';
   const ulElement = $("<ul></ul>");
   jsonData.forEach(item => {
     const slideElement = $(`
@@ -70,13 +72,15 @@ function createSlider(elementId, jsonData) {
   sliderContainer.append(ulElement);
   ulElement.lightSlider({
     item: 3,
-    controls: true,
+    controls: false,
     loop: true,
     auto: true,
     slideMove: 1,
     slideMargin: 30,
     pager:true,
-    vertical:false
+    vertical:false,
+    prevHtml: customPrevHtml,
+    nextHtml: customNextHtml  
   });
 }
 

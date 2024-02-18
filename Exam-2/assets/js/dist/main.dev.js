@@ -24,13 +24,7 @@ $(function () {
     slideMove: 1,
     vertical: true,
     verticalHeight: 800
-  }); // $("#customize-thumbnails-gallery").lightGallery({
-  //   animateThumb: false,
-  //   zoomFromOrigin: false,
-  //   allowMediaOverlap: true,
-  //   toggleThumb: true,
-  //   gallery: true
-  // });
+  });
 }); //wow
 
 new WOW().init(); //slider
@@ -47,22 +41,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function createSlider(elementId, jsonData) {
   var sliderContainer = $("#" + elementId);
+  var customPrevHtml = '<span class="custom-prev-html">Previous</span>';
+  var customNextHtml = '<span class="custom-next-html">Next</span>';
   var ulElement = $("<ul></ul>");
   jsonData.forEach(function (item) {
-    // Створення елемента для слайда
     var slideElement = $("\n      <li>\n        <div class=\"slide-top\">\n          <img src=\"".concat(item.image, "\" alt=\"").concat(item.title, "\">\n        </div>\n        <div class=\"title\">").concat(item.title, "</div>\n        <div class=\"news-text\">").concat(item.newsText, "</div>\n        <div class=\"author\">\n          <div class=\"avatar\">\n            <img src=\"").concat(item.author.avatar, "\" alt=\"").concat(item.author.name, "\">\n          </div>\n          <div class=\"author-data\">\n          <div class=\"name-author\">").concat(item.author.name, "</div>\n          <div class=\"news-date\">").concat(item.author.date, "</div>\n          </div>\n          </div>\n      </li>\n    "));
     ulElement.append(slideElement);
   });
   sliderContainer.append(ulElement);
   ulElement.lightSlider({
     item: 3,
-    controls: true,
+    controls: false,
     loop: true,
     auto: true,
     slideMove: 1,
     slideMargin: 30,
     pager: true,
-    vertical: false
+    vertical: false,
+    prevHtml: customPrevHtml,
+    nextHtml: customNextHtml
   });
 }
 

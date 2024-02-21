@@ -1,19 +1,18 @@
 "use strict";
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   var header = document.querySelector("header");
-//   window.addEventListener("scroll", function () {
-//     var scrollPosition = window.scrollY;
-//     // Якщо ви хочете, щоб ефект починався не відразу, а після певної висоти скролу,
-//     // то змініть умову на власний вибір
-//     if (scrollPosition > 100) {
-//       header.style.background = "rgba(36, 204, 250, 1)"; /* Колір фону при скролі */
-//     } else {
-//       header.style.background = "rgba(36, 204, 250, 0)"; /* Прозорий фон, коли скрол вверх */
-//     }
-//   });
-// });
-//hamburger-menu
+//header
+var header = document.querySelector('header');
+window.addEventListener('scroll', function () {
+  var scrollDistance = window.scrollY;
+  var threshold = 30;
+
+  if (scrollDistance > threshold) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+}); //hamburger-menu
+
 var lazyLoadInstance = new LazyLoad({});
 $(function () {
   $("#slider").lightSlider({
@@ -83,68 +82,64 @@ function initMap(link) {
   L.marker([41.054501905311206, -79.15649953375353], {
     icon: violetIcon
   }).addTo(map);
-}
+} //form
 
-var form = document.getElementById('feedback_form');
 
-function isValidEmail(email) {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
-}
-
-document.querySelectorAll('.form-control').forEach(function (elem) {
-  elem.onfocus = function () {
-    if (this.classList.contains('is-invalid')) {
-      this.classList.remove('is-invalid');
+$(document).ready(function () {
+  $('.form-control').focus(function () {
+    if ($(this).hasClass('is-invalid')) {
+      $(this).removeClass('is-invalid');
     }
-  };
-});
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  var errors = [];
-  var nameFld = document.getElementById('exampleInputName');
-  var emailFld = document.getElementById('exampleInputEmail1');
-  var name = nameFld.value.trim();
-  var email = emailFld.value.trim();
-
-  if (name === '') {
-    errors.push('Enter your name, please');
-    nameFld.classList.add('is-invalid');
-  } else if (name.length < 2) {
-    errors.push('Your name is too short');
-    nameFld.classList.add('is-invalid');
-  }
-
-  if (email === '') {
-    errors.push('Enter your email, please');
-    emailFld.classList.add('is-invalid');
-  } else if (!isValidEmail(email)) {
-    errors.push('Incorrect email format, please');
-    emailFld.classList.add('is-invalid');
-  }
-
-  if (errors.length) {
-    toast.error(errors.join('. '));
-    return;
-  }
-
-  var CHAT_ID = '-1002005768837';
-  var BOT_TOKEN = '6752195686:AAEk2PgvXP44n-Tv5IJcvCZCkkHOrzeH7pQ';
-  var message = "<b>Name: </b> ".concat(name, "\r\n<b>Email: </b>").concat(email);
-  var url = "https://api.telegram.org/bot".concat(BOT_TOKEN, "/sendMessage?chat_id=").concat(CHAT_ID, "&text=").concat(encodeURIComponent(message), "&parse_mode=HTML");
-  console.log(url);
-  fetch(url, {
-    method: 'post'
-  }).then(function (resp) {
-    return resp.json();
-  }).then(function (resp) {
-    if (resp.ok) {
-      nameFld.value = '';
-      emailFld.value = '';
-      toast.success('Your message successfully sent.');
-    } else toast.error('Some error occured.');
   });
-  return false;
+  $('#feedback_form').submit(function (e) {
+    e.preventDefault();
+    var errors = [];
+    var nameFld = $('#exampleInputName');
+    var emailFld = $('#exampleInputEmail1');
+    var name = nameFld.val().trim();
+    var email = emailFld.val().trim();
+
+    if (name === '') {
+      errors.push('Enter your name, please');
+      nameFld.addClass('is-invalid');
+    } else if (name.length < 2) {
+      errors.push('Your name is too short');
+      nameFld.addClass('is-invalid');
+    }
+
+    if (email === '') {
+      errors.push('Enter your email, please');
+      emailFld.addClass('is-invalid');
+    } else if (!isValidEmail(email)) {
+      errors.push('Incorrect email format, please');
+      emailFld.addClass('is-invalid');
+    }
+
+    if (errors.length) {
+      toast.error(errors.join('. '));
+      return;
+    }
+
+    var CHAT_ID = '-1002005768837';
+    var BOT_TOKEN = '6752195686:AAEk2PgvXP44n-Tv5IJcvCZCkkHOrzeH7pQ';
+    var message = "<b>Name: </b> ".concat(name, "\r\n<b>Email: </b>").concat(email);
+    var url = "https://api.telegram.org/bot".concat(BOT_TOKEN, "/sendMessage?chat_id=").concat(CHAT_ID, "&text=").concat(encodeURIComponent(message), "&parse_mode=HTML");
+    console.log(url);
+    $.post(url, function (resp) {
+      if (resp.ok) {
+        nameFld.val('');
+        emailFld.val('');
+        toast.success('Your message successfully sent.');
+      } else {
+        toast.error('Some error occurred.');
+      }
+    });
+  });
+
+  function isValidEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
 }); //scroll
 
 document.getElementById('scrollButton').addEventListener('click', function (event) {

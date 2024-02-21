@@ -1,3 +1,5 @@
+@import url(_hamburger.scss);
+
 @font-face {
   font-family: 'Inter Regular';
   src: local('Inter Regular'), local('Inter Regular'), url('../fonts/Inter-Regular.woff2') format('woff2');
@@ -41,6 +43,8 @@ $wite: #FFFFFF;
 $blue-gradient: #24CCFA;
 $cyant-gradient: #3C7FD4;
 $form-text: #4B5562;
+$dark-blue: #262A3F;
+$gray-color:#E4E4E4;
 
 a,
 button {
@@ -64,24 +68,43 @@ img {
 
 body {
   margin: 0;
+  position: relative;
 }
 
 .container {
   width: min(90%, 1170px);
   margin: 0 auto;
 }
-
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding-top: 38px;
+}
+//header
 header {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   width: 100%;
-  z-index: 1000;
-
+  z-index: 10;
+  top: 0;
+  min-height: 50px; 
   .nav-container {
-    // background-image: linear-gradient(to top right, rgba(36, 204, 250, 0.5), rgba(109, 11, 167, 0.5)), url(../img/hero-s.png);
-    background-size: cover;
-
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.50)), color-stop(24.1%, rgba(255, 255, 255, 0.24)), color-stop(47.19%, rgba(255, 255, 255, 0.00))), rgba(255, 255, 255, 0.02);
+    background: -o-linear-gradient(right, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(255, 255, 255, 0.00) 47.19%), rgba(255, 255, 255, 0.02);
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(255, 255, 255, 0.00) 47.19%), rgba(255, 255, 255, 0.02);
+    -webkit-backdrop-filter: blur(4.5px);
+            backdrop-filter: blur(4.5px);
+    position: relative;
+    display: none;
     .container {
-      padding-top: 38px;
       text-align: justify;
       display: flex;
       flex-direction: row;
@@ -152,10 +175,103 @@ header {
     }
   }
 }
-
-.hamburger-wrap {
-  display: none;
+main{
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
+
+// hamburger-menu
+.page-overlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#0000, .7);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+
+.menu-panel{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: $blue-gradient;
+  z-index: 1001;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  .panel-top{
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: darken( $gray-color, 10%);
+    .hamburger-wrap{
+      margin-left: -130px;
+    }
+  nav{
+    overflow: hidden;
+    height: calc(100vh - 100px);
+  }
+}
+.mobile-menu{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  a{
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 30px;
+    color: $black;
+    text-decoration: none;
+    color: $dark-blue;
+    font-family: 'Lato Regular';
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5rem; 
+    letter-spacing: 0.07rem;
+    }
+  }
+  
+.open-mobile-menu{
+  .page-overlay{
+    opacity: 10;
+    visibility: visible;
+  }
+  .menu-panel{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+}
+.hamburger-wrap{
+  display: block;
+  z-index: 120;
+}
+
 
 //hero-section
 #hero-section {
@@ -264,7 +380,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .scroll-button::before {
@@ -277,7 +393,7 @@ header {
 }
 
 .scroll-button:hover {
-  background-color: $cyant-gradient;
+  background-color: $violet;
 }
 
 //trade
@@ -827,4 +943,3 @@ margin-top: 90px;
       }
     }
   }
-

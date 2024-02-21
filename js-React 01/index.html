@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+    function MyApp() {
+          return (
+            <>
+              <Header />
+            </>
+          );
+        }
+      function Header(){
+        return <header className="header">
+            <div id="logo">
+                <a href="#">LOGO</a>
+                </div>
+                <div>
+                  <nav>
+                    <ul>
+                      <li>Home</li>
+                      <li>About</li>
+                      <li>Contacts</li>
+                    </ul>
+                  </nav>
+                </div>
+              </header>
+        // <><h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+        // <p>Lorem ipsum, dolor sit amet </p></>
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+
+    </script>
+  </body>
+</html>

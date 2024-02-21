@@ -13,7 +13,8 @@
 //     }
 //   });
 // });
-// var lazyLoadInstance = new LazyLoad({});
+//hamburger-menu
+var lazyLoadInstance = new LazyLoad({});
 $(function () {
   $("#slider").lightSlider({
     item: 1,
@@ -45,7 +46,7 @@ function createSlider(elementId, jsonData) {
   var customNextHtml = '<span class="custom-next-html">Next</span>';
   var ulElement = $("<ul></ul>");
   jsonData.forEach(function (item) {
-    var slideElement = $("\n      <li>\n        <div class=\"slide-top\">\n          <img src=\"".concat(item.image, "\" alt=\"").concat(item.title, "\">\n        </div>\n        <div class=\"title\">").concat(item.title, "</div>\n        <div class=\"news-text\">").concat(item.newsText, "</div>\n        <div class=\"author\">\n          <div class=\"avatar\">\n            <img src=\"").concat(item.author.avatar, "\" alt=\"").concat(item.author.name, "\">\n          </div>\n          <div class=\"author-data\">\n          <div class=\"name-author\">").concat(item.author.name, "</div>\n          <div class=\"news-date\">").concat(item.author.date, "</div>\n          </div>\n          </div>\n      </li>\n    "));
+    var slideElement = $("\n      <li>\n        <div class=\"slide-top\">\n          <img class=\"lazy\" \n          src=\"".concat(item.image, "\" alt=\"").concat(item.title, "\">\n        </div>\n        <div class=\"title\">").concat(item.title, "</div>\n        <div class=\"news-text\">").concat(item.newsText, "</div>\n        <div class=\"author\">\n          <div class=\"avatar\">\n            <img src=\"").concat(item.author.avatar, "\" alt=\"").concat(item.author.name, "\">\n          </div>\n          <div class=\"author-data\">\n          <div class=\"name-author\">").concat(item.author.name, "</div>\n          <div class=\"news-date\">").concat(item.author.date, "</div>\n          </div>\n          </div>\n      </li>\n    "));
     ulElement.append(slideElement);
   });
   sliderContainer.append(ulElement);
@@ -64,8 +65,6 @@ function createSlider(elementId, jsonData) {
 }
 
 lightGallery(document.getElementById('animated-thumbnails'), {
-  thumbnail: true,
-  animateThumb: false,
   allowMediaOverlap: true,
   toggleThumb: true
 }); //maps
@@ -146,4 +145,14 @@ form.addEventListener('submit', function (e) {
     } else toast.error('Some error occured.');
   });
   return false;
+}); //scroll
+
+document.getElementById('scrollButton').addEventListener('click', function (event) {
+  event.preventDefault();
+  var targetElement = document.getElementById('news');
+  var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth'
+  });
 });

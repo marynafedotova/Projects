@@ -14,7 +14,9 @@
 //   });
 // });
 
-// var lazyLoadInstance = new LazyLoad({});
+//hamburger-menu
+
+var lazyLoadInstance = new LazyLoad({});
 
 $(function() {
   $("#slider").lightSlider({
@@ -52,7 +54,8 @@ function createSlider(elementId, jsonData) {
     const slideElement = $(`
       <li>
         <div class="slide-top">
-          <img src="${item.image}" alt="${item.title}">
+          <img class="lazy" 
+          src="${item.image}" alt="${item.title}">
         </div>
         <div class="title">${item.title}</div>
         <div class="news-text">${item.newsText}</div>
@@ -85,8 +88,6 @@ function createSlider(elementId, jsonData) {
 }
 
 lightGallery(document.getElementById('animated-thumbnails'), {
-  thumbnail: true,
-  animateThumb: false,
     allowMediaOverlap: true,
     toggleThumb: true
 });
@@ -176,3 +177,13 @@ console.log(url);
     return false
 });
 
+//scroll
+document.getElementById('scrollButton').addEventListener('click', function(event) {
+  event.preventDefault();
+  const targetElement = document.getElementById('news');
+  const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth'
+  });
+});

@@ -13,6 +13,14 @@ window.addEventListener('scroll', function() {
 });
 
 //hamburger-menu
+document.getElementById('hamb-btn').addEventListener('click', function () {
+  document.body.classList.toggle('open-mobile-menu')
+})
+
+document.getElementById('hamb-btn-mobile').addEventListener('click', function () {
+  document.body.classList.toggle('open-mobile-menu')
+})
+//lazy
 
 var lazyLoadInstance = new LazyLoad({});
 
@@ -81,7 +89,23 @@ function createSlider(elementId, jsonData) {
     pager:true,
     vertical:false,
     prevHtml: customPrevHtml,
-    nextHtml: customNextHtml  
+    nextHtml: customNextHtml,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          item: 2,
+          slideMove: 1,
+        }
+      },
+      {
+        breakpoint: 900, 
+        settings: {
+          item: 1,
+          slideMove: 1,
+        }
+      }
+    ]
   });
 }
 

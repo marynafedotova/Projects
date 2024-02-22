@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/style/style.min.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+    <script type="text/babel">
+    
+    function MyApp() {
+  return (
+    <div className="container">
+      <Header />
+      <HeroSection />
+      <div className="content-container">
+        <BlogSection />
+        <News />
+      </div>
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <header className="header">
+      <div id="logo">
+        <a href="#">LOGO</a>
+      </div>
+      <h1>Blog name</h1>
+      <div>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contacts</li>
+            <li>Projects</li>
+            <li>Galary</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function HeroSection() {
+  return (
+    <div className="banner">
+      <img src="#" alt="banner" />
+    </div>
+  );
+}
+
+function BlogSection() {
+  return (
+    <div className="blog">
+      <h2>Blog</h2>
+      <ul className="blog-list">
+        <li>blog post 1</li>
+        <li>blog post 2</li>
+        <li>blog post 3</li>
+        <li>blog post 4</li>
+        <li>blog post 5</li>
+      </ul>
+    </div>
+  );
+}
+
+function News() {
+  return (
+    <div className="news">
+      <h2>News</h2>
+      <ul className="news-list">
+        <li>news post 1</li>
+        <li>news post 2</li>
+        <li>news post 3</li>
+        <li>news post 4</li>
+        <li>news post 5</li>
+      </ul>
+    </div>
+  );
+}
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<MyApp />);
+    </script>
+    
+  </div>
+  <script  type="module" src="assets/js/main.js"></script>
+</body>
+</html>

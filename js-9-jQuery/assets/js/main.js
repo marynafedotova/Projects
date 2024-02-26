@@ -1,27 +1,51 @@
 $(document).ready(function(){
   $('.slider-top').slick({
-    adaptiveHeight: true,
     autoplay: true,
-    // dots: true,
+    dots: true,
     speed: 500,
-    slidesToShow: 1,  // Додайте цей параметр
-    slidesToScroll: 1  // Додайте цей параметр
+    slidesToShow: 1,
+    arrows: false,
+    slidesToScroll: 1
   });
 });
 
+var lightSlider = $('#lightSlider').lightSlider({
+  item: 5,
+  auto: true,
+  loop: true,
+  slideMargin: 0,
+  controls: false,
+  speed: 300,
+  slideMove: 1
+});
 
-// $(function(){
-//   $('#sliderFirst').lightSlider({
-//     item:1,
-//     auto: true,
-    
-//   })
-//   })
-  
+window.goToPrevSlide = function () {
+  lightSlider.goToPrevSlide();
+};
 
+window.goToNextSlide = function () {
+  lightSlider.goToNextSlide();
+};
+$(document).ready(function(){
+  var partnersSlider = $('.lightSliderPartners');
 
-var drawCats = function(howManyTimes){
-  for ( var i=0; i < howManyTimes; i++ ){
-    console.log(i + "=<.>=");
-  }
-}
+  partnersSlider.slick({
+    autoplay: true,
+    dots: false,
+    speed: 300,
+    slidesToShow: 9,
+    arrows: false,
+    slidesToScroll: 1,
+    prevArrow: '',
+    nextArrow: ''
+  });
+
+  $('#btnPrev').on('click', function() {
+    partnersSlider.slick('slickPrev');
+  });
+
+  $('#btnNext').on('click', function() {
+    partnersSlider.slick('slickNext');
+  });
+});
+

@@ -76,7 +76,7 @@ header{
   .container{
     display: inline-flex;
     justify-content: space-between;
-    width: 1320px;
+    width: 100%;
   }
 }
 .logo{
@@ -103,11 +103,9 @@ header{
 }
 .button-nav {
   padding: 23px 0px;
-
   ul {
     display: flex;
     flex-direction: row;
-
     li {
       margin-right: 30px;
       list-style: none; 
@@ -117,7 +115,6 @@ header{
       margin-top: 16px;
     }
   }
-
   button {
     width: 36px;
     aspect-ratio: 1;
@@ -131,12 +128,8 @@ main{
   width: 36px;
   aspect-ratio: 1;
   border: none;
-  background-color: #fff;
   margin-right: 10px;
-  border:1px solid transparent;
-  &:hover{
-    border:1px solid $tomato-light;
-  }
+  background-color: transparent;
 }
 .account {
   background-image: url(../img/person-icon.png);
@@ -144,7 +137,7 @@ main{
   width: 36px;
   height: 36px;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
   position: relative;
   top:-15px;
   &::before {

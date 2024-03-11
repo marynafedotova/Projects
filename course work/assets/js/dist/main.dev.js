@@ -1,8 +1,9 @@
-const header = document.querySelector('header');
+"use strict";
 
-window.addEventListener('scroll', function() {
-  const scrollDistance = window.scrollY;
-  const threshold = 30;
+var header = document.querySelector('header');
+window.addEventListener('scroll', function () {
+  var scrollDistance = window.scrollY;
+  var threshold = 30;
 
   if (scrollDistance > threshold) {
     header.classList.add('scrolled');
@@ -10,19 +11,14 @@ window.addEventListener('scroll', function() {
     header.classList.remove('scrolled');
   }
 });
-
 document.getElementById('hamb-btn').addEventListener('click', function () {
-  document.body.classList.toggle('open-mobile-menu')
-})
-
+  document.body.classList.toggle('open-mobile-menu');
+});
 document.getElementById('hamb-btn-mobile').addEventListener('click', function () {
-  document.body.classList.toggle('open-mobile-menu')
-})
-
-
+  document.body.classList.toggle('open-mobile-menu');
+});
 var lazyLoadInstance = new LazyLoad({});
-
-$(function() {
+$(function () {
   $("#slider1").lightSlider({
     item: 3,
     slideMargin: 30,
@@ -32,7 +28,7 @@ $(function() {
     slideMove: 1
   });
 });
-$(function() {
+$(function () {
   $("#slider2").lightSlider({
     item: 3,
     slideMargin: 30,
@@ -42,35 +38,25 @@ $(function() {
     slideMove: 1
   });
 });
-
-
-
 new WOW().init();
-
-
 lightGallery(document.getElementById('animated-thumbnails'), {
-    allowMediaOverlap: true,
-    toggleThumb: true
-});
+  allowMediaOverlap: true,
+  toggleThumb: true
+}); //form
 
-
-//form
 $(document).ready(function () {
   $('.form-control').focus(function () {
     if ($(this).hasClass('is-invalid')) {
       $(this).removeClass('is-invalid');
     }
   });
-
   $('#feedback_form').submit(function (e) {
     e.preventDefault();
-
-    const errors = [];
-    const nameFld = $('#exampleInputName');
-    const emailFld = $('#exampleInputEmail1');
-
-    const name = nameFld.val().trim();
-    const email = emailFld.val().trim();
+    var errors = [];
+    var nameFld = $('#exampleInputName');
+    var emailFld = $('#exampleInputEmail1');
+    var name = nameFld.val().trim();
+    var email = emailFld.val().trim();
 
     if (name === '') {
       errors.push('Enter your name, please');
@@ -93,13 +79,11 @@ $(document).ready(function () {
       return;
     }
 
-    const CHAT_ID = '-1002005768837';
-    const BOT_TOKEN = '6752195686:AAEk2PgvXP44n-Tv5IJcvCZCkkHOrzeH7pQ';
-    const message = `<b>Name: </b> ${name}\r\n<b>Email: </b>${email}`;
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}&parse_mode=HTML`;
-
+    var CHAT_ID = '-1002005768837';
+    var BOT_TOKEN = '6752195686:AAEk2PgvXP44n-Tv5IJcvCZCkkHOrzeH7pQ';
+    var message = "<b>Name: </b> ".concat(name, "\r\n<b>Email: </b>").concat(email);
+    var url = "https://api.telegram.org/bot".concat(BOT_TOKEN, "/sendMessage?chat_id=").concat(CHAT_ID, "&text=").concat(encodeURIComponent(message), "&parse_mode=HTML");
     console.log(url);
-
     $.post(url, function (resp) {
       if (resp.ok) {
         nameFld.val('');

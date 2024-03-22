@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from "react-router-dom";
 export default function SiteHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
@@ -15,7 +15,7 @@ export default function SiteHeader() {
         <div className="panel-top">
           <div className="logo">
             <a href="/">
-              <img src="src/assets/images/logo.jpg" alt="logo" />
+              <img src="public/images/Logo.png" alt="logo" />
             </a>
           </div>
           <div className="hamburger-wrap">
@@ -28,28 +28,29 @@ export default function SiteHeader() {
         </div>
         <nav>
           <ul className="mobile-menu">
-            <li><a href="/" onClick={closeMobileMenu}>HOME</a></li>
-            <li><a href="#aboutus-block" onClick={closeMobileMenu}>ABOUT US</a></li>
-            <li><a href="#fav-movies-list" onClick={closeMobileMenu}>FAVORITE</a></li>
-            <li><a href="#contact" onClick={closeMobileMenu}>CONTACTS</a></li>
+            <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+            <li><Link to="/aboutus" onClick={closeMobileMenu}>About Us</Link></li>
+            <li><Link to="/services" onClick={closeMobileMenu}>Services</Link></li>
           </ul>
         </nav>
       </div>
       <header>
-        <div className="container">
           <div className="nav-container">
             <div className='logo'>
               <a href="/">
-                <img src="src/assets/images/logo.jpg" alt="logo" />
+              <img src="public/images/Logo.png" alt="logo" />
               </a>
             </div>
             <nav>
               <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="aboutus/">ABOUT US</a></li>
-                <li><a href="services/">CONTACTS</a></li>
+              <li><Link className="nav-link" to="/">Home</Link></li>
+              <li><Link className="nav-link" to="/aboutus">About Us</Link></li>
+              <li><Link className="nav-link" to="/services">Services</Link></li>
               </ul>
             </nav>
+            <div className="contacts">
+              <a href="#">Contact Us</a>
+            </div>
             <div className="hamburger-wrap">
               <button id="hamb-btn" className="hamburger hamburger--squeeze" type="button" onClick={toggleMobileMenu}>
                 <span className="hamburger-box">
@@ -58,7 +59,6 @@ export default function SiteHeader() {
               </button>
             </div>
           </div>
-        </div>
       </header>
     </div>
   );

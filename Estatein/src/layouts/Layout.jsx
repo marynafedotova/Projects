@@ -1,19 +1,15 @@
+import React from "react";
+
 import { Outlet } from "react-router-dom";
-import './assets/style/index.scss'
-export default function Layout(){
-  return <div className="page-content">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/"></a>Home</li>
-          <li><a href="about/">About Us</a></li>
-          <li><a href="services/">Services</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div className="container">
-      <Outlet/>
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
+
+export default function Layout() {
+  return (
+    <div className="page-content">
+      <SiteHeader />
+        <Outlet />
+      <SiteFooter />
     </div>
-    <SiteFooter />
-  </div>
+  );
 }

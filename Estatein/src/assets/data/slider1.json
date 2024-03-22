@@ -1,0 +1,157 @@
+{
+  "slider1": [
+    {
+      "slide-top": {
+        "img": {
+          "src": "assets/images/slide1.png",
+          "alt": "bulding"
+        }
+      },
+      "slide-mid": {
+        "h3": "Seaside Serenity Villa",
+        "p": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...",
+        "a": {
+          "href": "#",
+          "text": "Read More."
+        },
+        "ul": {
+          "li1": {
+            "img": {
+              "src": "assets/images/bad.png",
+              "alt": "bad"
+            },
+            "text": "4-Bedroom"
+          },
+          "li2": {
+            "img": {
+              "src": "assets/images/beath.png",
+              "alt": "beath"
+            },
+            "text": "3-Bathroom"
+          },
+          "li3": {
+            "img": {
+              "src": "assets/images/willa.png",
+              "alt": "willa"
+            },
+            "text": "Villa"
+          }
+        }
+      },
+      "slide-bottom": {
+        "Price": {
+          "div": {
+            "class": "price",
+            "text": "$550"
+          }
+        },
+        "a": {
+          "href": "#",
+          "text": "View Property Details"
+        }
+      }
+    },
+    {
+      "slide-top": {
+        "img": {
+          "src": "assets/images/slide2.png",
+          "alt": "bulding"
+        }
+      },
+      "slide-mid": {
+        "h3": "Metropolitan Haven",
+        "p": "A chic and fully-furnished 2-bedroom apartment with panoramic city views...",
+        "a": {
+          "href": "#",
+          "text": "Read More."
+        },
+        "ul": {
+          "li1": {
+            "img": {
+              "src": "assets/images/bad.png",
+              "alt": "bad"
+            },
+            "text": "2-Bedroom"
+          },
+          "li2": {
+            "img": {
+              "src": "assets/images/beath.png",
+              "alt": "beath"
+            },
+            "text": "2-Bathroom"
+          },
+          "li3": {
+            "img": {
+              "src": "assets/images/willa.png",
+              "alt": "willa"
+            },
+            "text": "Villa"
+          }
+        }
+      },
+      "slide-bottom": {
+        "Price": {
+          "div": {
+            "class": "price",
+            "text": "$550"
+          }
+        },
+        "a": {
+          "href": "#",
+          "text": "View Property Details"
+        }
+      }
+    },
+    {
+      "slide-top": {
+        "img": {
+          "src": "assets/images/slide3.png",
+          "alt": "bulding"
+        }
+      },
+      "slide-mid": {
+        "h3": "Seaside Serenity Villa",
+        "p": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...",
+        "a": {
+          "href": "#",
+          "text": "Read More."
+        },
+        "ul": {
+          "li1": {
+            "img": {
+              "src": "assets/images/bad.png",
+              "alt": "bad"
+            },
+            "text": "3-Bedroom"
+          },
+          "li2": {
+            "img": {
+              "src": "assets/images/beath.png",
+              "alt": "beath"
+            },
+            "text": "3-Bathroom"
+          },
+          "li3": {
+            "img": {
+              "src": "assets/images/willa.png",
+              "alt": "willa"
+            },
+            "text": "Villa"
+          }
+        }
+      },
+      "slide-bottom": {
+        "Price": {
+          "div": {
+            "class": "price",
+            "text": "$550"
+          }
+        },
+        "a": {
+          "href": "#",
+          "text": "View Property Details"
+        }
+      }
+    }
+  ]
+}

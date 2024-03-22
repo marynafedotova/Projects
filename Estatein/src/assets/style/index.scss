@@ -1,0 +1,323 @@
+
+:root {
+	--absolute-white: #fff;
+	--absolute-black: #000;
+	--purple-60: #703bf7;
+	--purple-65: #8254f8;
+	--purple-70: #946cf9;
+	--purple-75: #a685fa;
+	--purple-90: #dbcefd;
+	--purple-95: #ede7fe;
+	--purple-97: #f4f0fe;
+	--purple-99: #fbfaff;
+	--white-90: #e4e4e7;
+	--white-95: #f1f1f3;
+	--white-97: #f7f7f8;
+	--white-99: #fcfcfd;
+	--grey-08: #141414;
+	--grey-10: #1a1a1a;
+	--grey-15: #262626;
+	--grey-20: #333;
+	--grey-30: #4d4d4d;
+	--grey-40: #666;
+	--grey-50: #808080;
+	--grey-60: #999;
+}
+
+@font-face {
+  font-family: 'Urbanist Regular';
+  src: local('Urbanist Regular'), local('Urbanist-Regular'), url('src/assets/fonts/Urbanist-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Urbanist Medium';
+  src: local('Urbanist Medium'), local('Urbanist-Medium'), url('src/assets/fonts/Urbanist-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Urbanist Bold';
+  src: local('Urbanist Bold'), local('Urbanist-Bold'), url('src/assets/fonts/Urbanist-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Urbanist Semibold';
+  src: local('Urbanist Semibold'), local('Urbanist-Semibold'), url('src/assets/fonts/Urbanist-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter Medium';
+  src: local('Inter Medium'), local('Inter-Medium'), url('../style/fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@import '_hamburger.scss';
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a,
+button {
+  transition: all .2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+
+}
+img{
+  vertical-align: top;
+  height: 100%;
+  object-fit: cover;
+}
+.container{
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--absolute-black);
+  color: var(--absolute-white);
+}
+
+.page-wrapper{
+  min-height: 100vh;
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  min-height: 50px; 
+  background-color: var(--absolute-black); /* Додавання фонового кольору для header */
+  .nav-container {
+    position: relative;
+    .container {
+      display: flex;
+      align-items: center; /* Додано для вирівнювання елементів по центру */
+      justify-content: space-between;
+      height: 100%; /* Новий рядок для встановлення висоти контейнера */
+      .theme {
+        position: absolute;
+        left: 380px;
+        top: calc(50% - 10px);
+      }
+      .logo {
+        height: 100%; /* Новий рядок для встановлення висоти логотипу */
+        img {
+          width: 160px;
+          height: auto; /* Змінено на auto для збереження пропорцій */
+          margin-top: auto; /* Змінено на auto для вирівнювання по нижньому краю */
+          margin-left: 3px;
+        }
+      }
+      nav {
+        ul {
+          height: 100%; /* Новий рядок для встановлення висоти меню */
+          display: flex;
+          align-items: center; /* Додано для вирівнювання елементів по центру */
+          li {
+            display: inline-block;
+            padding-right: 30px;
+            padding-top: 28px;
+            padding-bottom: 28px;
+            transition: all 0.3s ease;
+            a {
+              font-family: 'Urbanist Medium';
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 150%;
+              color: var(--absolute-white);
+              position: relative;
+              display: block;
+              &:hover::after {
+                display: block;
+                content: '';
+                width: 100%;
+                height: 3px;
+                opacity: 0.3;
+                position: absolute;
+              }
+              :focus {
+                border: 2px solid;
+              }
+            }
+          }
+        }
+      }
+      .contacts a {
+        color: var(--absolute-white);
+        font-size: 18px;
+        font-family: 'Urbanist Medium';
+        line-height: 27px;
+        letter-spacing: 0;
+        padding-top: 28px; 
+        padding-bottom: 28px; 
+      }
+    }
+  }
+}
+
+
+main{
+  flex-grow: 1;
+  .first-screen{
+    margin-top: 100px;
+    display: flex;
+    .left-block{
+      width: 50%;
+      padding-top: 200px;
+      background-color: --grey-15;
+      h1{
+        margin-top: 0;
+        text-align: left;
+        margin-bottom: 0;
+        font-size: 60px;
+        font-style: normal;
+        font-family: "Urbanist",sans-serif;
+        font-weight: 600;
+        line-height: 72px;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+      .sub-title{
+        margin-top: 0;
+        text-align: left;
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        color: #999;
+        font-size: 18px;
+        font-style: normal;
+        font-family: "Urbanist",sans-serif;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+
+      .btn_first_screen {
+        display: flex;
+        gap: 20px;
+        left: 0px;
+        .btn-learnmore{
+            gap: 8px;
+            width: 200px;
+            display: flex;
+            padding: 18px 24px;
+            position: relative;
+            border: 1px solid #262626;
+            box-sizing: border-box;
+            align-items: center;
+            border-radius: 10px;
+            justify-content: center;
+            margin-top: 0;
+            text-align: left;
+            margin-bottom: 0;
+            color: #fff;
+            font-size: 18px;
+            font-family: "Urbanist",sans-serif;
+            font-weight: 500;
+            line-height: 27px;
+            letter-spacing: 0;
+            text-transform: none;
+          }
+          .btn-browse-properties{
+              gap: 8px;
+              display: flex;
+              padding: 18px 24px;
+              position: relative;
+              width: 200px;
+              box-sizing: border-box;
+              align-items: center;
+              border-radius: 10px;
+              justify-content: center;
+              background-color: #703bf7;
+              margin-top: 0;
+              text-align: left;
+              margin-bottom: 0;
+              min-height: auto;
+              color: #fff;
+              font-size: 18px;
+              font-style: normal;
+              font-family: "Urbanist",sans-serif;
+              font-weight: 500;
+              line-height: 27px;
+              letter-spacing: 0;
+              text-transform: none;
+            }
+          }
+          .num-bl{
+            gap: 2px;
+            width: 100%;
+            display: flex;
+            padding: 16px 24px;
+            position: relative;
+            max-width: 239px;
+            border: 1px solid #262626;
+            box-sizing: border-box;
+            align-items: flex-start;
+            border-radius: 12px ;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: #1a1a1a;
+            margin-top: 0;
+            min-height: auto;
+            text-align: left;
+            margin-bottom: 0;
+          .num {
+            color: #fff;
+            font-size: 40px;
+            font-style: normal;
+            margin-top: 0;
+            text-align: left;
+            font-family: "Urbanist",sans-serif;
+            font-weight: 700;
+            line-height: 60px;
+            margin-bottom: 0;
+            letter-spacing: 0;
+            text-transform: none;
+          }          
+          .num-title {
+            color: #999;
+            font-size: 18px;
+            font-style: normal;
+            margin-top: 0;
+            text-align: left;
+            font-family: "Urbanist",sans-serif;
+            font-weight: 500;
+            line-height: 27px;
+            margin-bottom: 0;
+            letter-spacing: 0;
+            text-transform: none;
+          }
+        }
+
+        }
+      }
+      }
+    
+    .right-block{
+      width: 45%;
+   
+      img{
+      width: 720px;
+      height: 814px;
+      }
+      
+    }
+  
+

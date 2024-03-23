@@ -9,7 +9,7 @@ export default function Layout() {
     <div className="page-content">
       <SiteHeader />
         <Outlet />
-      <SiteFooter />
+      {/* <SiteFooter /> */}
     </div>
   );
 }

@@ -3,7 +3,7 @@
     {
       "slide-top": {
         "img": {
-          "src": "assets/images/slide1.png",
+          "src": "public/images/slide1.png",
           "alt": "bulding"
         }
       },
@@ -17,21 +17,21 @@
         "ul": {
           "li1": {
             "img": {
-              "src": "assets/images/bad.png",
+              "src": "public/images/bad.png",
               "alt": "bad"
             },
             "text": "4-Bedroom"
           },
           "li2": {
             "img": {
-              "src": "assets/images/beath.png",
+              "src": "public/images/beath.png",
               "alt": "beath"
             },
             "text": "3-Bathroom"
           },
           "li3": {
             "img": {
-              "src": "assets/images/willa.png",
+              "src": "public/images/willa.png",
               "alt": "willa"
             },
             "text": "Villa"
@@ -42,7 +42,7 @@
         "Price": {
           "div": {
             "class": "price",
-            "text": "$550"
+            "text": "$550.000"
           }
         },
         "a": {
@@ -54,7 +54,7 @@
     {
       "slide-top": {
         "img": {
-          "src": "assets/images/slide2.png",
+          "src": "public/images/slide2.png",
           "alt": "bulding"
         }
       },
@@ -68,21 +68,21 @@
         "ul": {
           "li1": {
             "img": {
-              "src": "assets/images/bad.png",
+              "src": "public/images/bad.png",
               "alt": "bad"
             },
             "text": "2-Bedroom"
           },
           "li2": {
             "img": {
-              "src": "assets/images/beath.png",
+              "src": "public/images/beath.png",
               "alt": "beath"
             },
             "text": "2-Bathroom"
           },
           "li3": {
             "img": {
-              "src": "assets/images/willa.png",
+              "src": "public/images/willa.png",
               "alt": "willa"
             },
             "text": "Villa"
@@ -93,7 +93,7 @@
         "Price": {
           "div": {
             "class": "price",
-            "text": "$550"
+            "text": "$550.000"
           }
         },
         "a": {
@@ -105,7 +105,7 @@
     {
       "slide-top": {
         "img": {
-          "src": "assets/images/slide3.png",
+          "src": "public/images/slide3.png",
           "alt": "bulding"
         }
       },
@@ -119,21 +119,21 @@
         "ul": {
           "li1": {
             "img": {
-              "src": "assets/images/bad.png",
+              "src": "public/images/bad.png",
               "alt": "bad"
             },
             "text": "3-Bedroom"
           },
           "li2": {
             "img": {
-              "src": "assets/images/beath.png",
+              "src": "public/images/beath.png",
               "alt": "beath"
             },
             "text": "3-Bathroom"
           },
           "li3": {
             "img": {
-              "src": "assets/images/willa.png",
+              "src": "public/images/willa.png",
               "alt": "willa"
             },
             "text": "Villa"
@@ -144,7 +144,7 @@
         "Price": {
           "div": {
             "class": "price",
-            "text": "$550"
+            "text": "$550.000"
           }
         },
         "a": {
